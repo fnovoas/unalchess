@@ -20,18 +20,20 @@ public class controlador implements ActionListener {
     public static boolean enrroqueTorreDerechaB = true;
 
     public static String[][] tablero = new String[8][8];
-    private char turnoJugador = 'b';
+    private  char turnoJugador = 'b';
     private String posicionAntigua = null;
     private String posicionNueva = null;
     private String posicionActual;
     public static String fichaElegida;
     public static ImageIcon imagenElegida;
     movimientos movimientos;
+    public boolean jaqueMate=false;
     
     public controlador(){
         iniciarTablero();
         interfaz1 vista= new interfaz1(); 
         vista.setVisible(true);
+      //*  turnos();
         añadirActionEvents();
         movimientos = new movimientos();
         
@@ -150,10 +152,30 @@ public class controlador implements ActionListener {
                 posicionAntigua = posicionActual;
             } else if (posicionAntigua != null) {
                 posicionNueva = posicionActual;
-                if (movimientos.esPosibleEsteMovimiento(tablero, posicionAntigua, posicionNueva)){
+                if (movimientos.esPosibleEsteMovimientoA(tablero, posicionAntigua, posicionNueva)){
                     cambiarfichas(posicionAntigua, posicionNueva);
                     posicionNueva = null;
                     posicionAntigua = null;
+                    turnoJugador = 'n';
+                    comprobarJaqueMateHaciaBlancas();
+                    comprobarJaqueMateHaciaNegras();
+                   
+                }
+            }
+        }
+        if (turnoJugador == 'n') {
+            posicionActual = GETbutonposicion(ae.getSource());
+
+            if (comprobarSiLaFichaEsNegra(posicionActual)) {
+                posicionAntigua = posicionActual;
+            } else if (posicionAntigua != null) {
+                posicionNueva = posicionActual;
+                if (movimientos.esPosibleEsteMovimientoB(tablero, posicionAntigua, posicionNueva)){
+                    cambiarfichas(posicionAntigua, posicionNueva);
+                    posicionNueva = null;
+                    posicionAntigua = null;
+                    turnoJugador = 'b';
+                    comprobarJaqueMateHaciaNegras();
                     comprobarJaqueMateHaciaBlancas();
                 }
             }
@@ -163,6 +185,8 @@ public class controlador implements ActionListener {
     public void cambiarfichas(String posAntigua, String posNueva){
         cambiarenString(posAntigua, posNueva);
         cambiarEnPantalla(posAntigua,posNueva);
+        comprobarPeonEnUltimaFila();
+        comprobarEnrroque(posAntigua, posNueva);
         
     }
     
@@ -460,8 +484,39 @@ public class controlador implements ActionListener {
         }
         return false;
     }
+    private boolean comprobarSiLaFichaEsNegra(String posicion) {
+        int x = Character.getNumericValue(posicion.charAt(1));
+        int y = Character.getNumericValue(posicion.charAt(0));
+        if (!tablero[y][x].equals("")) {
+            return (tablero[y][x].charAt(0) == 'n') ? true : false;
+        }
+        return false;
+    }
     
-    private void comprobarPeonultimafila(){
+   /* private void turnos(String posAntigua, String posNueva){
+        cambiarenString(posAntigua, posNueva);
+        int xA = Character.getNumericValue(posAntigua.charAt(1));
+        int yA = Character.getNumericValue(posAntigua.charAt(0));
+
+        int xN = Character.getNumericValue(posNueva.charAt(1));
+        int yN = Character.getNumericValue(posNueva.charAt(0));
+        
+        if(turnoJugador=='b'){
+            if(tablero[yA][xA] == ""){
+                turnoJugador='n';
+            }
+        }
+         if(turnoJugador=='n'){
+            if(posicionAntigua==posicionActual || posicionNueva==posicionActual){
+                turnoJugador='b';
+            }
+        }
+        
+        }*/
+        
+    
+    
+    private void comprobarPeonEnUltimaFila(){
         for (int i = 0; i < 8; i++) {
             if (tablero[0][i].equals("b_peon")) {
                 //Se mostrara la tabla de eleccion de ficha
@@ -472,20 +527,21 @@ public class controlador implements ActionListener {
             }
 
             if (tablero[7][i].equals("n_peon")) {
-                tablero[7][i] = "n_reina";
+                eleccionDePeonN();
+                tablero[7][i] = fichaElegida;
                 String posicion = "7" + i;
-                boton(posicion).setIcon(new ImageIcon(getClass().getResource("/Imagenes/ReinaNegra-removebg-preview.png")));
+                boton(posicion).setIcon(imagenElegida);
             }
         }
     }
     private void comprobarJaqueMateHaciaBlancas(){
-        boolean jaqueMate = true;
+      boolean jaqueMate = true;
         for(int i = 0;i<8;i++){
             for(int j = 0;j<8;j++){
                 String posicion = ""+i+""+j;
                 if(comprobarSiLaFichaEsBlanca(posicion)){
-                    String[] movimientosF = movimientos.movimientosAmodificados(tablero, posicion);
-                    if(!movimientosF[0].equals("")){
+                    String[] movimientosb = movimientos.movimientosAmodificados(tablero, posicion);
+                    if(!movimientosb[0].equals("")){
                         jaqueMate = false;
                         break;
                     }
@@ -494,17 +550,47 @@ public class controlador implements ActionListener {
         }
         
         if(jaqueMate == true){
-            MateHaciaBlancas ventana = new MateHaciaBlancas();
+            JaqueMate ventana = new JaqueMate(null,true);
             ventana.setVisible(true);
         }
         
-    }//
+    }
+    private void comprobarJaqueMateHaciaNegras(){
+        boolean jaqueMate = true;
+        for(int i = 0;i<8;i++){
+            for(int j = 0;j<8;j++){
+                String posicion = ""+i+""+j;
+                if(comprobarSiLaFichaEsNegra(posicion)){
+                    String[] movimientosn = movimientos.movimientosBmodificados(tablero, posicion);
+                    if(!movimientosn[0].equals("")){
+                        jaqueMate = false;
+                        break;
+                    }
+                }
+            }
+        }
+        
+        if(jaqueMate == true){
+            JaqueMate ventana = new JaqueMate(null,true);
+            ventana.setVisible(true);
+        }
+        
+    }
+    
     private void eleccionDePeon() {
         
         VentanaEleccionFicha ventanaElec = new VentanaEleccionFicha(null, true);
         ventanaElec.setVisible(true);
     
     }
+    
+    private void eleccionDePeonN() {
+        
+        VentanaEleccionFichaN ventanaElecN = new VentanaEleccionFichaN(null, true);
+        ventanaElecN.setVisible(true);
+    
+    }
+    
     private void comprobarEnrroque(String posAntigua, String posNueva) {
         int xN = Character.getNumericValue(posNueva.charAt(1));
         int yN = Character.getNumericValue(posNueva.charAt(0));
@@ -512,7 +598,7 @@ public class controlador implements ActionListener {
         int xA = Character.getNumericValue(posAntigua.charAt(1));
         int yA = Character.getNumericValue(posAntigua.charAt(0));
 
-        if (tablero[yN][xN].equals("A_rey") || tablero[yN][xN].equals("B_rey")) {
+        if (tablero[yN][xN].equals("b_rey") || tablero[yN][xN].equals("n_rey")) {
             if (xA + 2 == xN) {
                 //Derecha
                 tablero[yN][xN - 1] = tablero[yN][7];

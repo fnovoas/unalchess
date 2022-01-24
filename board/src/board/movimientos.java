@@ -20,14 +20,29 @@ public class movimientos {
         }
     }
     
-    public boolean esPosibleEsteMovimiento(String[][] tablero, String posicionAntigua, String posicionNueva) {
+    public boolean esPosibleEsteMovimientoA(String[][] tablero, String posicionAntigua, String posicionNueva) {
         this.tablero = tablero;
-        String[] posicionesPosibles;
-        posicionesPosibles = movimientosAmodificados(tablero, posicionAntigua);
+        String[] posicionesPosiblesA;
+        posicionesPosiblesA = movimientosAmodificados(tablero, posicionAntigua);
 
-        if (posicionesPosibles != null) {
-            for (int i = 0; i < posicionesPosibles.length; i++) {
-                if (posicionesPosibles[i].equals(posicionNueva)) {
+        if (posicionesPosiblesA != null) {
+            for (int i = 0; i < posicionesPosiblesA.length; i++) {
+                if (posicionesPosiblesA[i].equals(posicionNueva)) {
+                    comprobarAcercaDeEnrroque(posicionAntigua);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public boolean esPosibleEsteMovimientoB(String[][] tablero, String posicionAntigua, String posicionNueva) {
+        this.tablero = tablero;
+        String[] posicionesPosiblesB;
+        posicionesPosiblesB = movimientosBmodificados(tablero, posicionAntigua);
+
+        if (posicionesPosiblesB != null) {
+            for (int i = 0; i < posicionesPosiblesB.length; i++) {
+                if (posicionesPosiblesB[i].equals(posicionNueva)) {
                     comprobarAcercaDeEnrroque(posicionAntigua);
                     return true;
                 }
@@ -1761,16 +1776,16 @@ public class movimientos {
         }
 
         //Enrroque
-        /*
-        if (Controlador.Controlador.enrroqueReyB == true) {
-            if (tableroM[0][1].equals("") && tableroM[0][2].equals("") && tableroM[0][3].equals("") && Controlador.Controlador.enrroqueTorreIzquierdaB == true) {
+        
+        if (controlador.enrroqueReyB == true) {
+            if (tableroM[0][1].equals("") && tableroM[0][2].equals("") && tableroM[0][3].equals("") && controlador.enrroqueTorreIzquierdaB == true) {
                 posicionesPosibles += "" + "02" + "_";
             }
-            if (tableroM[0][5].equals("") && tableroM[0][6].equals("") && Controlador.Controlador.enrroqueTorreDerechaB == true) {
+            if (tableroM[0][5].equals("") && tableroM[0][6].equals("") && controlador.enrroqueTorreDerechaB == true) {
                 posicionesPosibles += "" + "06" + "_";
             }
         }
-         */
+         
         String[] arregloPosicionesPosibles = posicionesPosibles.split("_");
 
         return arregloPosicionesPosibles;

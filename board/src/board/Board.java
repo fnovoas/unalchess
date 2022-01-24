@@ -15,7 +15,9 @@ public class Board {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        controlador C1=new controlador();
+        wideframe menu=new wideframe();
+        menu.setVisible(true);
+        
     }
     
 }
