@@ -2,7 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package board;
+package Controlador;
+import Modelo.Movimientos;
+import board.MateHaciaBlancas;
+import board.Tablero_1;
+import board.VentanaEleccionFicha;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -11,7 +15,7 @@ import javax.swing.JButton;
  *
  * @author Lenovo
  */
-public class controlador implements ActionListener {
+public class Controlador implements ActionListener {
     public static boolean enrroqueReyA = true;
     public static boolean enrroqueTorreIzquierdaA = true;
     public static boolean enrroqueTorreDerechaA = true;
@@ -26,14 +30,14 @@ public class controlador implements ActionListener {
     private String posicionActual;
     public static String fichaElegida;
     public static ImageIcon imagenElegida;
-    movimientos movimientos;
+    Movimientos movimientos;
     
-    public controlador(){
+    public Controlador(){
         iniciarTablero();
-        interfaz1 vista= new interfaz1(); 
+        Tablero_1 vista= new Tablero_1(); 
         vista.setVisible(true);
         añadirActionEvents();
-        movimientos = new movimientos();
+        movimientos = new Movimientos();
         
         
     }
@@ -68,77 +72,77 @@ public class controlador implements ActionListener {
     } 
 //Se crea un array que hara de tablero y se incializan los String que actuaran como fichas   
     private void añadirActionEvents() {
-        interfaz1.c00.addActionListener(this);
-        interfaz1.c01.addActionListener(this);
-        interfaz1.c02.addActionListener(this);
-        interfaz1.c03.addActionListener(this);
-        interfaz1.c04.addActionListener(this);
-        interfaz1.c05.addActionListener(this);
-        interfaz1.c06.addActionListener(this);
-        interfaz1.c07.addActionListener(this);
+        Tablero_1.c00.addActionListener(this);
+        Tablero_1.c01.addActionListener(this);
+        Tablero_1.c02.addActionListener(this);
+        Tablero_1.c03.addActionListener(this);
+        Tablero_1.c04.addActionListener(this);
+        Tablero_1.c05.addActionListener(this);
+        Tablero_1.c06.addActionListener(this);
+        Tablero_1.c07.addActionListener(this);
 
-        interfaz1.c10.addActionListener(this);
-        interfaz1.c11.addActionListener(this);
-        interfaz1.c12.addActionListener(this);
-        interfaz1.c13.addActionListener(this);
-        interfaz1.c14.addActionListener(this);
-        interfaz1.c15.addActionListener(this);
-        interfaz1.c16.addActionListener(this);
-        interfaz1.c17.addActionListener(this);
+        Tablero_1.c10.addActionListener(this);
+        Tablero_1.c11.addActionListener(this);
+        Tablero_1.c12.addActionListener(this);
+        Tablero_1.c13.addActionListener(this);
+        Tablero_1.c14.addActionListener(this);
+        Tablero_1.c15.addActionListener(this);
+        Tablero_1.c16.addActionListener(this);
+        Tablero_1.c17.addActionListener(this);
 
-        interfaz1.c20.addActionListener(this);
-        interfaz1.c21.addActionListener(this);
-        interfaz1.c22.addActionListener(this);
-        interfaz1.c23.addActionListener(this);
-        interfaz1.c24.addActionListener(this);
-        interfaz1.c25.addActionListener(this);
-        interfaz1.c26.addActionListener(this);
-        interfaz1.c27.addActionListener(this);
+        Tablero_1.c20.addActionListener(this);
+        Tablero_1.c21.addActionListener(this);
+        Tablero_1.c22.addActionListener(this);
+        Tablero_1.c23.addActionListener(this);
+        Tablero_1.c24.addActionListener(this);
+        Tablero_1.c25.addActionListener(this);
+        Tablero_1.c26.addActionListener(this);
+        Tablero_1.c27.addActionListener(this);
 
-        interfaz1.c30.addActionListener(this);
-        interfaz1.c31.addActionListener(this);
-        interfaz1.c32.addActionListener(this);
-        interfaz1.c33.addActionListener(this);
-        interfaz1.c34.addActionListener(this);
-        interfaz1.c35.addActionListener(this);
-        interfaz1.c36.addActionListener(this);
-        interfaz1.c37.addActionListener(this);
+        Tablero_1.c30.addActionListener(this);
+        Tablero_1.c31.addActionListener(this);
+        Tablero_1.c32.addActionListener(this);
+        Tablero_1.c33.addActionListener(this);
+        Tablero_1.c34.addActionListener(this);
+        Tablero_1.c35.addActionListener(this);
+        Tablero_1.c36.addActionListener(this);
+        Tablero_1.c37.addActionListener(this);
 
-        interfaz1.c40.addActionListener(this);
-        interfaz1.c41.addActionListener(this);
-        interfaz1.c42.addActionListener(this);
-        interfaz1.c43.addActionListener(this);
-        interfaz1.c44.addActionListener(this);
-        interfaz1.c45.addActionListener(this);
-        interfaz1.c46.addActionListener(this);
-        interfaz1.c47.addActionListener(this);
+        Tablero_1.c40.addActionListener(this);
+        Tablero_1.c41.addActionListener(this);
+        Tablero_1.c42.addActionListener(this);
+        Tablero_1.c43.addActionListener(this);
+        Tablero_1.c44.addActionListener(this);
+        Tablero_1.c45.addActionListener(this);
+        Tablero_1.c46.addActionListener(this);
+        Tablero_1.c47.addActionListener(this);
 
-        interfaz1.c50.addActionListener(this);
-        interfaz1.c51.addActionListener(this);
-        interfaz1.c52.addActionListener(this);
-        interfaz1.c53.addActionListener(this);
-        interfaz1.c54.addActionListener(this);
-        interfaz1.c55.addActionListener(this);
-        interfaz1.c56.addActionListener(this);
-        interfaz1.c57.addActionListener(this);
+        Tablero_1.c50.addActionListener(this);
+        Tablero_1.c51.addActionListener(this);
+        Tablero_1.c52.addActionListener(this);
+        Tablero_1.c53.addActionListener(this);
+        Tablero_1.c54.addActionListener(this);
+        Tablero_1.c55.addActionListener(this);
+        Tablero_1.c56.addActionListener(this);
+        Tablero_1.c57.addActionListener(this);
 
-        interfaz1.c60.addActionListener(this);
-        interfaz1.c61.addActionListener(this);
-        interfaz1.c62.addActionListener(this);
-        interfaz1.c63.addActionListener(this);
-        interfaz1.c64.addActionListener(this);
-        interfaz1.c65.addActionListener(this);
-        interfaz1.c66.addActionListener(this);
-        interfaz1.c67.addActionListener(this);
+        Tablero_1.c60.addActionListener(this);
+        Tablero_1.c61.addActionListener(this);
+        Tablero_1.c62.addActionListener(this);
+        Tablero_1.c63.addActionListener(this);
+        Tablero_1.c64.addActionListener(this);
+        Tablero_1.c65.addActionListener(this);
+        Tablero_1.c66.addActionListener(this);
+        Tablero_1.c67.addActionListener(this);
 
-        interfaz1.c70.addActionListener(this);
-        interfaz1.c71.addActionListener(this);
-        interfaz1.c72.addActionListener(this);
-        interfaz1.c73.addActionListener(this);
-        interfaz1.c74.addActionListener(this);
-        interfaz1.c75.addActionListener(this);
-        interfaz1.c76.addActionListener(this);
-        interfaz1.c77.addActionListener(this);
+        Tablero_1.c70.addActionListener(this);
+        Tablero_1.c71.addActionListener(this);
+        Tablero_1.c72.addActionListener(this);
+        Tablero_1.c73.addActionListener(this);
+        Tablero_1.c74.addActionListener(this);
+        Tablero_1.c75.addActionListener(this);
+        Tablero_1.c76.addActionListener(this);
+        Tablero_1.c77.addActionListener(this);
     }
 
     @Override
@@ -185,266 +189,266 @@ public class controlador implements ActionListener {
     
     private JButton boton (String posicion){
          if (posicion.equals("00")) {
-            return interfaz1.c00;
+            return Tablero_1.c00;
         } else if (posicion.equals("01")) {
-            return interfaz1.c01;
+            return Tablero_1.c01;
         } else if (posicion.equals("02")) {
-            return interfaz1.c02;
+            return Tablero_1.c02;
         } else if (posicion.equals("03")) {
-            return interfaz1.c03;
+            return Tablero_1.c03;
         } else if (posicion.equals("04")) {
-            return interfaz1.c04;
+            return Tablero_1.c04;
         } else if (posicion.equals("05")) {
-            return interfaz1.c05;
+            return Tablero_1.c05;
         } else if (posicion.equals("06")) {
-            return interfaz1.c06;
+            return Tablero_1.c06;
         } else if (posicion.equals("07")) {
-            return interfaz1.c07;
+            return Tablero_1.c07;
         } else if (posicion.equals("10")) {
-            return interfaz1.c10;
+            return Tablero_1.c10;
         } else if (posicion.equals("11")) {
-            return interfaz1.c11;
+            return Tablero_1.c11;
         } else if (posicion.equals("12")) {
-            return interfaz1.c12;
+            return Tablero_1.c12;
         } else if (posicion.equals("13")) {
-            return interfaz1.c13;
+            return Tablero_1.c13;
         } else if (posicion.equals("14")) {
-            return interfaz1.c14;
+            return Tablero_1.c14;
         } else if (posicion.equals("15")) {
-            return interfaz1.c15;
+            return Tablero_1.c15;
         } else if (posicion.equals("16")) {
-            return interfaz1.c16;
+            return Tablero_1.c16;
         } else if (posicion.equals("17")) {
-            return interfaz1.c17;
+            return Tablero_1.c17;
         } else if (posicion.equals("20")) {
-            return interfaz1.c20;
+            return Tablero_1.c20;
         } else if (posicion.equals("21")) {
-            return interfaz1.c21;
+            return Tablero_1.c21;
         } else if (posicion.equals("22")) {
-            return interfaz1.c22;
+            return Tablero_1.c22;
         } else if (posicion.equals("23")) {
-            return interfaz1.c23;
+            return Tablero_1.c23;
         } else if (posicion.equals("24")) {
-            return interfaz1.c24;
+            return Tablero_1.c24;
         } else if (posicion.equals("25")) {
-            return interfaz1.c25;
+            return Tablero_1.c25;
         } else if (posicion.equals("26")) {
-            return interfaz1.c26;
+            return Tablero_1.c26;
         } else if (posicion.equals("27")) {
-            return interfaz1.c27;
+            return Tablero_1.c27;
         } else if (posicion.equals("30")) {
-            return interfaz1.c30;
+            return Tablero_1.c30;
         } else if (posicion.equals("31")) {
-            return interfaz1.c31;
+            return Tablero_1.c31;
         } else if (posicion.equals("32")) {
-            return interfaz1.c32;
+            return Tablero_1.c32;
         } else if (posicion.equals("33")) {
-            return interfaz1.c33;
+            return Tablero_1.c33;
         } else if (posicion.equals("34")) {
-            return interfaz1.c34;
+            return Tablero_1.c34;
         } else if (posicion.equals("35")) {
-            return interfaz1.c35;
+            return Tablero_1.c35;
         } else if (posicion.equals("36")) {
-            return interfaz1.c36;
+            return Tablero_1.c36;
         } else if (posicion.equals("37")) {
-            return interfaz1.c37;
+            return Tablero_1.c37;
         } else if (posicion.equals("40")) {
-            return interfaz1.c40;
+            return Tablero_1.c40;
         } else if (posicion.equals("41")) {
-            return interfaz1.c41;
+            return Tablero_1.c41;
         } else if (posicion.equals("42")) {
-            return interfaz1.c42;
+            return Tablero_1.c42;
         } else if (posicion.equals("43")) {
-            return interfaz1.c43;
+            return Tablero_1.c43;
         } else if (posicion.equals("44")) {
-            return interfaz1.c44;
+            return Tablero_1.c44;
         } else if (posicion.equals("45")) {
-            return interfaz1.c45;
+            return Tablero_1.c45;
         } else if (posicion.equals("46")) {
-            return interfaz1.c46;
+            return Tablero_1.c46;
         } else if (posicion.equals("47")) {
-            return interfaz1.c47;
+            return Tablero_1.c47;
         } else if (posicion.equals("50")) {
-            return interfaz1.c50;
+            return Tablero_1.c50;
         } else if (posicion.equals("51")) {
-            return interfaz1.c51;
+            return Tablero_1.c51;
         } else if (posicion.equals("52")) {
-            return interfaz1.c52;
+            return Tablero_1.c52;
         } else if (posicion.equals("53")) {
-            return interfaz1.c53;
+            return Tablero_1.c53;
         } else if (posicion.equals("54")) {
-            return interfaz1.c54;
+            return Tablero_1.c54;
         } else if (posicion.equals("55")) {
-            return interfaz1.c55;
+            return Tablero_1.c55;
         } else if (posicion.equals("56")) {
-            return interfaz1.c56;
+            return Tablero_1.c56;
         } else if (posicion.equals("57")) {
-            return interfaz1.c57;
+            return Tablero_1.c57;
         } else if (posicion.equals("60")) {
-            return interfaz1.c60;
+            return Tablero_1.c60;
         } else if (posicion.equals("61")) {
-            return interfaz1.c61;
+            return Tablero_1.c61;
         } else if (posicion.equals("62")) {
-            return interfaz1.c62;
+            return Tablero_1.c62;
         } else if (posicion.equals("63")) {
-            return interfaz1.c63;
+            return Tablero_1.c63;
         } else if (posicion.equals("64")) {
-            return interfaz1.c64;
+            return Tablero_1.c64;
         } else if (posicion.equals("65")) {
-            return interfaz1.c65;
+            return Tablero_1.c65;
         } else if (posicion.equals("66")) {
-            return interfaz1.c66;
+            return Tablero_1.c66;
         } else if (posicion.equals("67")) {
-            return interfaz1.c67;
+            return Tablero_1.c67;
         } else if (posicion.equals("70")) {
-            return interfaz1.c70;
+            return Tablero_1.c70;
         } else if (posicion.equals("71")) {
-            return interfaz1.c71;
+            return Tablero_1.c71;
         } else if (posicion.equals("72")) {
-            return interfaz1.c72;
+            return Tablero_1.c72;
         } else if (posicion.equals("73")) {
-            return interfaz1.c73;
+            return Tablero_1.c73;
         } else if (posicion.equals("74")) {
-            return interfaz1.c74;
+            return Tablero_1.c74;
         } else if (posicion.equals("75")) {
-            return interfaz1.c75;
+            return Tablero_1.c75;
         } else if (posicion.equals("76")) {
-            return interfaz1.c76;
+            return Tablero_1.c76;
         } else if (posicion.equals("77")) {
-            return interfaz1.c77;
+            return Tablero_1.c77;
         }
         return null;
     }
    
             
     private String GETbutonposicion (Object boton){
-        if (boton == interfaz1.c00) {
+        if (boton == Tablero_1.c00) {
             return "00";
-        } else if (boton == interfaz1.c01) {
+        } else if (boton == Tablero_1.c01) {
             return "01";
-        } else if (boton == interfaz1.c02) {
+        } else if (boton == Tablero_1.c02) {
             return "02";
-        } else if (boton == interfaz1.c03) {
+        } else if (boton == Tablero_1.c03) {
             return "03";
-        } else if (boton == interfaz1.c04) {
+        } else if (boton == Tablero_1.c04) {
             return "04";
-        } else if (boton == interfaz1.c05) {
+        } else if (boton == Tablero_1.c05) {
             return "05";
-        } else if (boton == interfaz1.c06) {
+        } else if (boton == Tablero_1.c06) {
             return "06";
-        } else if (boton == interfaz1.c07) {
+        } else if (boton == Tablero_1.c07) {
             return "07";
-        } else if (boton == interfaz1.c10) {
+        } else if (boton == Tablero_1.c10) {
             return "10";
-        } else if (boton == interfaz1.c11) {
+        } else if (boton == Tablero_1.c11) {
             return "11";
-        } else if (boton == interfaz1.c12) {
+        } else if (boton == Tablero_1.c12) {
             return "12";
-        } else if (boton == interfaz1.c13) {
+        } else if (boton == Tablero_1.c13) {
             return "13";
-        } else if (boton == interfaz1.c14) {
+        } else if (boton == Tablero_1.c14) {
             return "14";
-        } else if (boton == interfaz1.c15) {
+        } else if (boton == Tablero_1.c15) {
             return "15";
-        } else if (boton == interfaz1.c16) {
+        } else if (boton == Tablero_1.c16) {
             return "16";
-        } else if (boton == interfaz1.c17) {
+        } else if (boton == Tablero_1.c17) {
             return "17";
-        } else if (boton == interfaz1.c20) {
+        } else if (boton == Tablero_1.c20) {
             return "20";
-        } else if (boton == interfaz1.c21) {
+        } else if (boton == Tablero_1.c21) {
             return "21";
-        } else if (boton == interfaz1.c22) {
+        } else if (boton == Tablero_1.c22) {
             return "22";
-        } else if (boton == interfaz1.c23) {
+        } else if (boton == Tablero_1.c23) {
             return "23";
-        } else if (boton == interfaz1.c24) {
+        } else if (boton == Tablero_1.c24) {
             return "24";
-        } else if (boton == interfaz1.c25) {
+        } else if (boton == Tablero_1.c25) {
             return "25";
-        } else if (boton == interfaz1.c26) {
+        } else if (boton == Tablero_1.c26) {
             return "26";
-        } else if (boton == interfaz1.c27) {
+        } else if (boton == Tablero_1.c27) {
             return "27";
-        } else if (boton == interfaz1.c30) {
+        } else if (boton == Tablero_1.c30) {
             return "30";
-        } else if (boton == interfaz1.c31) {
+        } else if (boton == Tablero_1.c31) {
             return "31";
-        } else if (boton == interfaz1.c32) {
+        } else if (boton == Tablero_1.c32) {
             return "32";
-        } else if (boton == interfaz1.c33) {
+        } else if (boton == Tablero_1.c33) {
             return "33";
-        } else if (boton == interfaz1.c34) {
+        } else if (boton == Tablero_1.c34) {
             return "34";
-        } else if (boton == interfaz1.c35) {
+        } else if (boton == Tablero_1.c35) {
             return "35";
-        } else if (boton == interfaz1.c36) {
+        } else if (boton == Tablero_1.c36) {
             return "36";
-        } else if (boton == interfaz1.c37) {
+        } else if (boton == Tablero_1.c37) {
             return "37";
-        } else if (boton == interfaz1.c40) {
+        } else if (boton == Tablero_1.c40) {
             return "40";
-        } else if (boton == interfaz1.c41) {
+        } else if (boton == Tablero_1.c41) {
             return "41";
-        } else if (boton == interfaz1.c42) {
+        } else if (boton == Tablero_1.c42) {
             return "42";
-        } else if (boton == interfaz1.c43) {
+        } else if (boton == Tablero_1.c43) {
             return "43";
-        } else if (boton == interfaz1.c44) {
+        } else if (boton == Tablero_1.c44) {
             return "44";
-        } else if (boton == interfaz1.c45) {
+        } else if (boton == Tablero_1.c45) {
             return "45";
-        } else if (boton == interfaz1.c46) {
+        } else if (boton == Tablero_1.c46) {
             return "46";
-        } else if (boton == interfaz1.c47) {
+        } else if (boton == Tablero_1.c47) {
             return "47";
-        } else if (boton == interfaz1.c50) {
+        } else if (boton == Tablero_1.c50) {
             return "50";
-        } else if (boton == interfaz1.c51) {
+        } else if (boton == Tablero_1.c51) {
             return "51";
-        } else if (boton == interfaz1.c52) {
+        } else if (boton == Tablero_1.c52) {
             return "52";
-        } else if (boton == interfaz1.c53) {
+        } else if (boton == Tablero_1.c53) {
             return "53";
-        } else if (boton == interfaz1.c54) {
+        } else if (boton == Tablero_1.c54) {
             return "54";
-        } else if (boton == interfaz1.c55) {
+        } else if (boton == Tablero_1.c55) {
             return "55";
-        } else if (boton == interfaz1.c56) {
+        } else if (boton == Tablero_1.c56) {
             return "56";
-        } else if (boton == interfaz1.c57) {
+        } else if (boton == Tablero_1.c57) {
             return "57";
-        } else if (boton == interfaz1.c60) {
+        } else if (boton == Tablero_1.c60) {
             return "60";
-        } else if (boton == interfaz1.c61) {
+        } else if (boton == Tablero_1.c61) {
             return "61";
-        } else if (boton == interfaz1.c62) {
+        } else if (boton == Tablero_1.c62) {
             return "62";
-        } else if (boton == interfaz1.c63) {
+        } else if (boton == Tablero_1.c63) {
             return "63";
-        } else if (boton == interfaz1.c64) {
+        } else if (boton == Tablero_1.c64) {
             return "64";
-        } else if (boton == interfaz1.c65) {
+        } else if (boton == Tablero_1.c65) {
             return "65";
-        } else if (boton == interfaz1.c66) {
+        } else if (boton == Tablero_1.c66) {
             return "66";
-        } else if (boton == interfaz1.c67) {
+        } else if (boton == Tablero_1.c67) {
             return "67";
-        } else if (boton == interfaz1.c70) {
+        } else if (boton == Tablero_1.c70) {
             return "70";
-        } else if (boton == interfaz1.c71) {
+        } else if (boton == Tablero_1.c71) {
             return "71";
-        } else if (boton == interfaz1.c72) {
+        } else if (boton == Tablero_1.c72) {
             return "72";
-        } else if (boton == interfaz1.c73) {
+        } else if (boton == Tablero_1.c73) {
             return "73";
-        } else if (boton == interfaz1.c74) {
+        } else if (boton == Tablero_1.c74) {
             return "74";
-        } else if (boton == interfaz1.c75) {
+        } else if (boton == Tablero_1.c75) {
             return "75";
-        } else if (boton == interfaz1.c76) {
+        } else if (boton == Tablero_1.c76) {
             return "76";
-        } else if (boton == interfaz1.c77) {
+        } else if (boton == Tablero_1.c77) {
             return "77";
         }
         return null;

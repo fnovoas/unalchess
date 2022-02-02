@@ -4,18 +4,20 @@
  */
 package board;
 
+import Controlador.Controlador;
+
 /**
  *
  * @author Lenovo
  */
-public class Board {
+public class Juego {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        controlador C1=new controlador();
+        Controlador C1=new Controlador();
     }
     
 }

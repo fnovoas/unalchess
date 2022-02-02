@@ -175,7 +175,7 @@ public class Wireframe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    interfaz1 cl= new interfaz1();
+    Tablero_1 cl= new Tablero_1();
     cl.setVisible(true);
     this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed

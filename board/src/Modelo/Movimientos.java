@@ -2,13 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package board;
+package Modelo;
+
+import Controlador.Controlador;
 
 /**
  *
  * @author Lenovo
  */
-public class movimientos {
+public class Movimientos {
     
     String[][] tablero;
 
@@ -38,17 +40,17 @@ public class movimientos {
     
     private void comprobarAcercaDeEnrroque(String posAntigua) {
         if (posAntigua.equals("74")) {
-             controlador.enrroqueReyA=false;
+             Controlador.enrroqueReyA=false;
         } else if (posAntigua.equals("70")) {
-            controlador.enrroqueTorreIzquierdaA = false;
+            Controlador.enrroqueTorreIzquierdaA = false;
         } else if (posAntigua.equals("77")) {
-            controlador.enrroqueTorreDerechaA = false;
+            Controlador.enrroqueTorreDerechaA = false;
         } else if (posAntigua.equals("04")) {
-            controlador.enrroqueReyB = false;
+            Controlador.enrroqueReyB = false;
         } else if (posAntigua.equals("00")) {
-            controlador.enrroqueTorreIzquierdaB = false;
+            Controlador.enrroqueTorreIzquierdaB = false;
         } else if (posAntigua.equals("07")) {
-            controlador.enrroqueTorreDerechaB = false;
+            Controlador.enrroqueTorreDerechaB = false;
         }
     }
 
@@ -1537,11 +1539,11 @@ public class movimientos {
         }
 
         //Enrroque 
-        if (controlador.enrroqueReyA == true) {
-            if (tableroM[7][1].equals("") && tableroM[7][2].equals("") && tableroM[7][3].equals("") && controlador.enrroqueTorreIzquierdaA == true) {
+        if (Controlador.enrroqueReyA == true) {
+            if (tableroM[7][1].equals("") && tableroM[7][2].equals("") && tableroM[7][3].equals("") && Controlador.enrroqueTorreIzquierdaA == true) {
                 posicionesPosibles += "" + "72" + "_";
             }
-            if (tableroM[7][5].equals("") && tableroM[7][6].equals("") && controlador.enrroqueTorreDerechaA == true) {
+            if (tableroM[7][5].equals("") && tableroM[7][6].equals("") && Controlador.enrroqueTorreDerechaA == true) {
                 posicionesPosibles += "" + "76" + "_";
             }
         }

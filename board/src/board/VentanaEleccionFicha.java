@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package board;
+import Controlador.Controlador;
 import javax.swing.ImageIcon;
 /**
  *
@@ -85,26 +86,26 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        controlador.fichaElegida = "b_reina";
-        controlador.imagenElegida = (ImageIcon) jButton1.getIcon();
+        Controlador.fichaElegida = "b_reina";
+        Controlador.imagenElegida = (ImageIcon) jButton1.getIcon();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        controlador.fichaElegida = "b_alfil";
-        controlador.imagenElegida = (ImageIcon) jButton2.getIcon();
+        Controlador.fichaElegida = "b_alfil";
+        Controlador.imagenElegida = (ImageIcon) jButton2.getIcon();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        controlador.fichaElegida = "b_caballo";
-        controlador.imagenElegida = (ImageIcon) jButton3.getIcon();
+        Controlador.fichaElegida = "b_caballo";
+        Controlador.imagenElegida = (ImageIcon) jButton3.getIcon();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        controlador.fichaElegida = "A_torre";
-        controlador.imagenElegida = (ImageIcon) jButton4.getIcon();
+        Controlador.fichaElegida = "A_torre";
+        Controlador.imagenElegida = (ImageIcon) jButton4.getIcon();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
