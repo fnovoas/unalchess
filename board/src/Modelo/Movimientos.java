@@ -30,7 +30,7 @@ public class Movimientos {
         if (posicionesPosibles != null) {
             for (int i = 0; i < posicionesPosibles.length; i++) {
                 if (posicionesPosibles[i].equals(posicionNueva)) {
-                    comprobarAcercaDeEnrroque(posicionAntigua);
+                    comprobarAcercaDeEnroque(posicionAntigua);
                     return true;
                 }
             }
@@ -38,7 +38,7 @@ public class Movimientos {
         return false;
     }
     
-    private void comprobarAcercaDeEnrroque(String posAntigua) {
+    private void comprobarAcercaDeEnroque(String posAntigua) {
         if (posAntigua.equals("74")) {
              Controlador.enroqueReyA=false;
         } else if (posAntigua.equals("70")) {

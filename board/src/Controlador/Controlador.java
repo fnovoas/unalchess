@@ -16,6 +16,9 @@ import javax.swing.JButton;
  * @author Lenovo
  */
 public class Controlador implements ActionListener {
+    Turno turno = new Turno();
+    
+    
     public static boolean enroqueReyA = true;
     public static boolean enroqueTorreIzquierdaA = true;
     public static boolean enroqueTorreDerechaA = true;
@@ -160,6 +163,8 @@ public class Controlador implements ActionListener {
                     posicionNueva = null;
                     posicionAntigua = null;
                     comprobarJaqueMateHaciaBlancas();
+                    turno.setEstado(false);
+
                 }
             }
         }
@@ -455,7 +460,7 @@ public class Controlador implements ActionListener {
         return null;
     
     }
-    //se les asignan valores a los botones para saber su posicion
+    //se les asignan valores a los botones para saber su posición
     
     private boolean comprobarSiLaFichaEsBlanca(String posicion) {
         int x = Character.getNumericValue(posicion.charAt(1));
@@ -510,7 +515,7 @@ public class Controlador implements ActionListener {
         ventanaElec.setVisible(true);
     
     }
-    private void comprobarEnrroque(String posAntigua, String posNueva) {
+    private void comprobarEnroque(String posAntigua, String posNueva) {
         int xN = Character.getNumericValue(posNueva.charAt(1));
         int yN = Character.getNumericValue(posNueva.charAt(0));
 
