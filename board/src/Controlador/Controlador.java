@@ -16,12 +16,12 @@ import javax.swing.JButton;
  * @author Lenovo
  */
 public class Controlador implements ActionListener {
-    public static boolean enrroqueReyA = true;
-    public static boolean enrroqueTorreIzquierdaA = true;
-    public static boolean enrroqueTorreDerechaA = true;
-    public static boolean enrroqueReyB = true;
-    public static boolean enrroqueTorreIzquierdaB = true;
-    public static boolean enrroqueTorreDerechaB = true;
+    public static boolean enroqueReyA = true;
+    public static boolean enroqueTorreIzquierdaA = true;
+    public static boolean enroqueTorreDerechaA = true;
+    public static boolean enroqueReyB = true;
+    public static boolean enroqueTorreIzquierdaB = true;
+    public static boolean enroqueTorreDerechaB = true;
 
     public static String[][] tablero = new String[8][8];
     private char turnoJugador = 'b';
@@ -70,7 +70,7 @@ public class Controlador implements ActionListener {
         tablero [7][7]="b_torre";
         
     } 
-//Se crea un array que hara de tablero y se incializan los String que actuaran como fichas   
+//Se crea un array que hará de tablero y se incializan los String que actuarán como fichas   
     private void añadirActionEvents() {
         Tablero_1.c00.addActionListener(this);
         Tablero_1.c01.addActionListener(this);
@@ -148,7 +148,8 @@ public class Controlador implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (turnoJugador == 'b') {
-            posicionActual = GETbutonposicion(ae.getSource());
+
+            posicionActual = GETPosicionBoton(ae.getSource());
 
             if (comprobarSiLaFichaEsBlanca(posicionActual)) {
                 posicionAntigua = posicionActual;
@@ -321,7 +322,7 @@ public class Controlador implements ActionListener {
     }
    
             
-    private String GETbutonposicion (Object boton){
+    private String GETPosicionBoton (Object boton){
         if (boton == Tablero_1.c00) {
             return "00";
         } else if (boton == Tablero_1.c01) {
@@ -465,7 +466,7 @@ public class Controlador implements ActionListener {
         return false;
     }
     
-    private void comprobarPeonultimafila(){
+    private void comprobarPeonUltimaFila(){
         for (int i = 0; i < 8; i++) {
             if (tablero[0][i].equals("b_peon")) {
                 //Se mostrara la tabla de eleccion de ficha

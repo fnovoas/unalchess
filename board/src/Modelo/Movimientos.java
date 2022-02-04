@@ -40,17 +40,17 @@ public class Movimientos {
     
     private void comprobarAcercaDeEnrroque(String posAntigua) {
         if (posAntigua.equals("74")) {
-             Controlador.enrroqueReyA=false;
+             Controlador.enroqueReyA=false;
         } else if (posAntigua.equals("70")) {
-            Controlador.enrroqueTorreIzquierdaA = false;
+            Controlador.enroqueTorreIzquierdaA = false;
         } else if (posAntigua.equals("77")) {
-            Controlador.enrroqueTorreDerechaA = false;
+            Controlador.enroqueTorreDerechaA = false;
         } else if (posAntigua.equals("04")) {
-            Controlador.enrroqueReyB = false;
+            Controlador.enroqueReyB = false;
         } else if (posAntigua.equals("00")) {
-            Controlador.enrroqueTorreIzquierdaB = false;
+            Controlador.enroqueTorreIzquierdaB = false;
         } else if (posAntigua.equals("07")) {
-            Controlador.enrroqueTorreDerechaB = false;
+            Controlador.enroqueTorreDerechaB = false;
         }
     }
 
@@ -1539,11 +1539,11 @@ public class Movimientos {
         }
 
         //Enrroque 
-        if (Controlador.enrroqueReyA == true) {
-            if (tableroM[7][1].equals("") && tableroM[7][2].equals("") && tableroM[7][3].equals("") && Controlador.enrroqueTorreIzquierdaA == true) {
+        if (Controlador.enroqueReyA == true) {
+            if (tableroM[7][1].equals("") && tableroM[7][2].equals("") && tableroM[7][3].equals("") && Controlador.enroqueTorreIzquierdaA == true) {
                 posicionesPosibles += "" + "72" + "_";
             }
-            if (tableroM[7][5].equals("") && tableroM[7][6].equals("") && Controlador.enrroqueTorreDerechaA == true) {
+            if (tableroM[7][5].equals("") && tableroM[7][6].equals("") && Controlador.enroqueTorreDerechaA == true) {
                 posicionesPosibles += "" + "76" + "_";
             }
         }
@@ -1764,11 +1764,11 @@ public class Movimientos {
 
         //Enrroque
         /*
-        if (Controlador.Controlador.enrroqueReyB == true) {
-            if (tableroM[0][1].equals("") && tableroM[0][2].equals("") && tableroM[0][3].equals("") && Controlador.Controlador.enrroqueTorreIzquierdaB == true) {
+        if (Controlador.Controlador.enroqueReyB == true) {
+            if (tableroM[0][1].equals("") && tableroM[0][2].equals("") && tableroM[0][3].equals("") && Controlador.Controlador.enroqueTorreIzquierdaB == true) {
                 posicionesPosibles += "" + "02" + "_";
             }
-            if (tableroM[0][5].equals("") && tableroM[0][6].equals("") && Controlador.Controlador.enrroqueTorreDerechaB == true) {
+            if (tableroM[0][5].equals("") && tableroM[0][6].equals("") && Controlador.Controlador.enroqueTorreDerechaB == true) {
                 posicionesPosibles += "" + "06" + "_";
             }
         }
