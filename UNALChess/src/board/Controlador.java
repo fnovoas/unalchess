@@ -3,15 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package board;
+import static board.Tablero_1.JPanel_Turno;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+
 /**
  *
  * @author Lenovo
  */
 public class Controlador implements ActionListener {
+
+    
     public static boolean enrroqueReyA = true;
     public static boolean enrroqueTorreIzquierdaA = true;
     public static boolean enrroqueTorreDerechaA = true;
@@ -20,7 +25,10 @@ public class Controlador implements ActionListener {
     public static boolean enrroqueTorreDerechaB = true;
 
     public static String[][] tablero = new String[8][8];
-    private  char turnoJugador = 'b';
+    /*public char turnoJugador = 'b'; */ 
+    Turno turnoJugador = new Turno(); //determina el turno
+
+    
     private String posicionAntigua = null;
     private String posicionNueva = null;
     private String posicionActual;
@@ -39,6 +47,7 @@ public class Controlador implements ActionListener {
         
         
     }
+     
      public void iniciarTablero(){
         for (int i=0; i<8; i++){
             for (int j=0; j<8; j++){
@@ -145,7 +154,7 @@ public class Controlador implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if (turnoJugador == 'b') {
+        if (turnoJugador.getTurnoJugador() == 'b') { //da el turno a las blancas
             posicionActual = GETbutonposicion(ae.getSource());
 
             if (comprobarSiLaFichaEsBlanca(posicionActual)) {
@@ -156,14 +165,15 @@ public class Controlador implements ActionListener {
                     cambiarfichas(posicionAntigua, posicionNueva);
                     posicionNueva = null;
                     posicionAntigua = null;
-                    turnoJugador = 'n';
+                    turnoJugador.setTurnoJugador('n');
+                    JPanel_Turno.setBackground(Color.black);//cede el turno a las negras
                     comprobarJaqueMateHaciaBlancas();
                     comprobarJaqueMateHaciaNegras();
                    
                 }
             }
         }
-        if (turnoJugador == 'n') {
+        if (turnoJugador.getTurnoJugador() == 'n') { //da el turno a las negras
             posicionActual = GETbutonposicion(ae.getSource());
 
             if (comprobarSiLaFichaEsNegra(posicionActual)) {
@@ -174,7 +184,8 @@ public class Controlador implements ActionListener {
                     cambiarfichas(posicionAntigua, posicionNueva);
                     posicionNueva = null;
                     posicionAntigua = null;
-                    turnoJugador = 'b';
+                    turnoJugador.setTurnoJugador('b');
+                    JPanel_Turno.setBackground(Color.white);//cede el turno a las blancas
                     comprobarJaqueMateHaciaNegras();
                     comprobarJaqueMateHaciaBlancas();
                 }
