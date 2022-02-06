@@ -35,12 +35,12 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(200, 200));
+        setBackground(new java.awt.Color(250, 250, 250));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(144, 144));
         jPanel1.setLayout(new java.awt.GridLayout(2, 2));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Reina-removebg-preview.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Reina_Blanco.png"))); // NOI18N
         jButton3.setAlignmentX(0.8F);
         jButton3.setAlignmentY(0.8F);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -50,7 +50,7 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
         });
         jPanel1.add(jButton3);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Torre-removebg-preview.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Torre_Blanco.png"))); // NOI18N
         jButton4.setAlignmentX(0.8F);
         jButton4.setAlignmentY(0.8F);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +60,7 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
         });
         jPanel1.add(jButton4);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Caballo-removebg-preview.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Caballo_Blanco.png"))); // NOI18N
         jButton2.setAlignmentX(0.8F);
         jButton2.setAlignmentY(0.8F);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +70,7 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
         });
         jPanel1.add(jButton2);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Alfil-removebg-preview.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Alfil_Blanco.png"))); // NOI18N
         jButton1.setAlignmentX(0.8F);
         jButton1.setAlignmentY(0.8F);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -85,16 +85,16 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -149,6 +149,7 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(VentanaEleccionFicha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */

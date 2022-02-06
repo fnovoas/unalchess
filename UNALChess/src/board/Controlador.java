@@ -561,7 +561,7 @@ public class Controlador implements ActionListener {
         }
         
         if(jaqueMate == true){
-            JaqueMate ventana = new JaqueMate(null,true);
+            JaqueMateBlancas ventana = new JaqueMateBlancas(null,true);
             ventana.setVisible(true);
         }
         
@@ -582,7 +582,7 @@ public class Controlador implements ActionListener {
         }
         
         if(jaqueMate == true){
-            JaqueMate ventana = new JaqueMate(null,true);
+            JaqueMateNegras ventana = new JaqueMateNegras(null,true);
             ventana.setVisible(true);
         }
         

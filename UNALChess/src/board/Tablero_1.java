@@ -100,6 +100,8 @@ public class Tablero_1 extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,7 +110,7 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.setLayout(new java.awt.GridLayout(8, 8));
 
         c00.setBackground(new java.awt.Color(255, 255, 255));
-        c00.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/TorreNegra-removebg-preview.png"))); // NOI18N
+        c00.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Torre_Negro.png"))); // NOI18N
         c00.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c00.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +120,7 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c00);
 
         c01.setBackground(new java.awt.Color(102, 102, 102));
-        c01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CaballoNegro-removebg-preview.png"))); // NOI18N
+        c01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Caballo_Negro.png"))); // NOI18N
         c01.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,7 +130,7 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c01);
 
         c02.setBackground(new java.awt.Color(255, 255, 255));
-        c02.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AlfilNegro-removebg-preview (2).png"))); // NOI18N
+        c02.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Alfil_Negro.png"))); // NOI18N
         c02.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +140,7 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c02);
 
         c03.setBackground(new java.awt.Color(102, 102, 102));
-        c03.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ReinaNegra-removebg-preview.png"))); // NOI18N
+        c03.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Reina_Negro.png"))); // NOI18N
         c03.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +150,7 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c03);
 
         c04.setBackground(new java.awt.Color(255, 255, 255));
-        c04.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ReyNegro-removebg-preview.png"))); // NOI18N
+        c04.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Rey_Negro.png"))); // NOI18N
         c04.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,7 +160,7 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c04);
 
         c05.setBackground(new java.awt.Color(102, 102, 102));
-        c05.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AlfilNegro-removebg-preview (2).png"))); // NOI18N
+        c05.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Alfil_Negro.png"))); // NOI18N
         c05.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,7 +170,7 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c05);
 
         c06.setBackground(new java.awt.Color(255, 255, 255));
-        c06.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CaballoNegro-removebg-preview.png"))); // NOI18N
+        c06.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Caballo_Negro.png"))); // NOI18N
         c06.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,7 +180,7 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c06);
 
         c07.setBackground(new java.awt.Color(102, 102, 102));
-        c07.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/TorreNegra-removebg-preview.png"))); // NOI18N
+        c07.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Torre_Negro.png"))); // NOI18N
         c07.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c07.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,12 +190,12 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c07);
 
         c10.setBackground(new java.awt.Color(102, 102, 102));
-        c10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_PeonNegra-removebg-preview.png"))); // NOI18N
+        c10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Negro.png"))); // NOI18N
         c10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c10);
 
         c11.setBackground(new java.awt.Color(255, 255, 255));
-        c11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_PeonNegra-removebg-preview.png"))); // NOI18N
+        c11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Negro.png"))); // NOI18N
         c11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,17 +205,17 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c11);
 
         c12.setBackground(new java.awt.Color(102, 102, 102));
-        c12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_PeonNegra-removebg-preview.png"))); // NOI18N
+        c12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Negro.png"))); // NOI18N
         c12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c12);
 
         c13.setBackground(new java.awt.Color(255, 255, 255));
-        c13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_PeonNegra-removebg-preview.png"))); // NOI18N
+        c13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Negro.png"))); // NOI18N
         c13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c13);
 
         c14.setBackground(new java.awt.Color(102, 102, 102));
-        c14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_PeonNegra-removebg-preview.png"))); // NOI18N
+        c14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Negro.png"))); // NOI18N
         c14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,17 +225,17 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c14);
 
         c15.setBackground(new java.awt.Color(255, 255, 255));
-        c15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_PeonNegra-removebg-preview.png"))); // NOI18N
+        c15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Negro.png"))); // NOI18N
         c15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c15);
 
         c16.setBackground(new java.awt.Color(102, 102, 102));
-        c16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_PeonNegra-removebg-preview.png"))); // NOI18N
+        c16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Negro.png"))); // NOI18N
         c16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c16);
 
         c17.setBackground(new java.awt.Color(255, 255, 255));
-        c17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_PeonNegra-removebg-preview.png"))); // NOI18N
+        c17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Negro.png"))); // NOI18N
         c17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c17);
 
@@ -391,7 +393,7 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c57);
 
         c60.setBackground(new java.awt.Color(255, 255, 255));
-        c60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_Peon-removebg-preview.png"))); // NOI18N
+        c60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Blanco.png"))); // NOI18N
         c60.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -401,42 +403,42 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c60);
 
         c61.setBackground(new java.awt.Color(102, 102, 102));
-        c61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_Peon-removebg-preview.png"))); // NOI18N
+        c61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Blanco.png"))); // NOI18N
         c61.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c61);
 
         c62.setBackground(new java.awt.Color(255, 255, 255));
-        c62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_Peon-removebg-preview.png"))); // NOI18N
+        c62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Blanco.png"))); // NOI18N
         c62.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c62);
 
         c63.setBackground(new java.awt.Color(102, 102, 102));
-        c63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_Peon-removebg-preview.png"))); // NOI18N
+        c63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Blanco.png"))); // NOI18N
         c63.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c63);
 
         c64.setBackground(new java.awt.Color(255, 255, 255));
-        c64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_Peon-removebg-preview.png"))); // NOI18N
+        c64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Blanco.png"))); // NOI18N
         c64.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c64);
 
         c65.setBackground(new java.awt.Color(102, 102, 102));
-        c65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_Peon-removebg-preview.png"))); // NOI18N
+        c65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Blanco.png"))); // NOI18N
         c65.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c65);
 
         c66.setBackground(new java.awt.Color(255, 255, 255));
-        c66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_Peon-removebg-preview.png"))); // NOI18N
+        c66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Blanco.png"))); // NOI18N
         c66.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c66);
 
         c67.setBackground(new java.awt.Color(102, 102, 102));
-        c67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ficha_Peon-removebg-preview.png"))); // NOI18N
+        c67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Peon_Blanco.png"))); // NOI18N
         c67.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c67);
 
         c70.setBackground(new java.awt.Color(102, 102, 102));
-        c70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Torre-removebg-preview.png"))); // NOI18N
+        c70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Torre_Blanco.png"))); // NOI18N
         c70.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c70.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -446,12 +448,12 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c70);
 
         c71.setBackground(new java.awt.Color(255, 255, 255));
-        c71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Caballo-removebg-preview.png"))); // NOI18N
+        c71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Caballo_Blanco.png"))); // NOI18N
         c71.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c71);
 
         c72.setBackground(new java.awt.Color(102, 102, 102));
-        c72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Alfil-removebg-preview.png"))); // NOI18N
+        c72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Alfil_Blanco.png"))); // NOI18N
         c72.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c72.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -461,22 +463,22 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c72);
 
         c73.setBackground(new java.awt.Color(255, 255, 255));
-        c73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Reina-removebg-preview.png"))); // NOI18N
+        c73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Reina_Blanco.png"))); // NOI18N
         c73.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c73);
 
         c74.setBackground(new java.awt.Color(102, 102, 102));
-        c74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Rey-removebg-preview.png"))); // NOI18N
+        c74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Rey_Blanco.png"))); // NOI18N
         c74.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c74);
 
         c75.setBackground(new java.awt.Color(255, 255, 255));
-        c75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Alfil-removebg-preview.png"))); // NOI18N
+        c75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Alfil_Blanco.png"))); // NOI18N
         c75.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         vistatablero.add(c75);
 
         c76.setBackground(new java.awt.Color(102, 102, 102));
-        c76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Caballo-removebg-preview.png"))); // NOI18N
+        c76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Caballo_Blanco.png"))); // NOI18N
         c76.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c76.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -486,7 +488,7 @@ public class Tablero_1 extends javax.swing.JFrame {
         vistatablero.add(c76);
 
         c77.setBackground(new java.awt.Color(255, 255, 255));
-        c77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Torre-removebg-preview.png"))); // NOI18N
+        c77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Torre_Blanco.png"))); // NOI18N
         c77.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         c77.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -495,8 +497,8 @@ public class Tablero_1 extends javax.swing.JFrame {
         });
         vistatablero.add(c77);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Tiempo negras");
+        jLabel1.setFont(new java.awt.Font("Georgia", 0, 26)); // NOI18N
+        jLabel1.setText("Tiempo negras:");
 
         JPanel_Turno.setBackground(new java.awt.Color(255, 255, 255));
         JPanel_Turno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -512,24 +514,25 @@ public class Tablero_1 extends javax.swing.JFrame {
             .addGap(0, 57, Short.MAX_VALUE)
         );
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setText("Turno");
+        jLabel2.setFont(new java.awt.Font("Georgia", 0, 26)); // NOI18N
+        jLabel2.setText("Turno:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
         jLabel3.setText("min:");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
         jLabel4.setText("seg:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel5.setText("Tiempo blancas");
+        jLabel5.setFont(new java.awt.Font("Georgia", 0, 26)); // NOI18N
+        jLabel5.setText("Tiempo blancas:");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
         jLabel6.setText("min:");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
         jLabel7.setText("seg:");
 
+        jButton1.setFont(new java.awt.Font("Georgia", 0, 22)); // NOI18N
         jButton1.setText("menú");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -537,15 +540,21 @@ public class Tablero_1 extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Logo.png"))); // NOI18N
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Logo.png"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(vistatablero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(vistatablero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -559,36 +568,45 @@ public class Tablero_1 extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel7))))
-                    .addComponent(jButton1))
-                .addContainerGap(88, Short.MAX_VALUE))
+                                .addComponent(jLabel7)))
+                        .addContainerGap(50, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel9))))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel8)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addComponent(jLabel8)
+                .addGap(0, 6, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(vistatablero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addGap(0, 7, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(JPanel_Turno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addGap(59, 59, 59)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4))
-                        .addGap(31, 31, 31)
+                        .addGap(42, 42, 42)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(jLabel7))
-                        .addGap(254, 254, 254))
-                    .addComponent(vistatablero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addContainerGap(19, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel9)))
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -707,6 +725,8 @@ public class Tablero_1 extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -792,6 +812,8 @@ public class Tablero_1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     public javax.swing.JPanel vistatablero;
     // End of variables declaration//GEN-END:variables
         }
