@@ -16,8 +16,7 @@ public class Con_cambio extends javax.swing.JFrame {
     public Con_cambio() {
         initComponents();
         this.setLocationRelativeTo(null);
-        rsscalelabel.RSScaleLabel.setScaleLabel(l1, "src/imagenes/comoJugar1.png");
-        rsscalelabel.RSScaleLabel.setScaleLabel(l2, "src/imagenes/comoJugar2.png");
+       
         
  }
 
@@ -46,16 +45,16 @@ public class Con_cambio extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        l1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        l1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/comoJugar1.2.png"))); // NOI18N
         l1.setMaximumSize(new java.awt.Dimension(500, 500));
         l1.setMinimumSize(new java.awt.Dimension(500, 500));
         l1.setName("l1"); // NOI18N
         l1.setPreferredSize(new java.awt.Dimension(500, 500));
-        jPanel3.add(l1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 420, 280));
+        jPanel3.add(l1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 600, 330));
 
-        l2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        l2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/comoJugar2.2.png"))); // NOI18N
         l2.setName("l2"); // NOI18N
-        jPanel3.add(l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, 400, 280));
+        jPanel3.add(l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 320, 290));
 
         Cerrar.setBackground(new java.awt.Color(0, 102, 255));
         Cerrar.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
