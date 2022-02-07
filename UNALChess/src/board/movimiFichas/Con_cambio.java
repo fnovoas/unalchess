@@ -38,6 +38,8 @@ public class Con_cambio extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -46,22 +48,20 @@ public class Con_cambio extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        l1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         l1.setMaximumSize(new java.awt.Dimension(500, 500));
         l1.setMinimumSize(new java.awt.Dimension(500, 500));
         l1.setName("l1"); // NOI18N
         l1.setPreferredSize(new java.awt.Dimension(500, 500));
-        jPanel3.add(l1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 420, 280));
+        jPanel3.add(l1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 420, 50, 20));
 
-        l2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         l2.setName("l2"); // NOI18N
-        jPanel3.add(l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, 400, 280));
+        jPanel3.add(l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 410, 50, 30));
 
         Cerrar.setBackground(new java.awt.Color(0, 102, 255));
         Cerrar.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
         Cerrar.setForeground(new java.awt.Color(255, 255, 255));
         Cerrar.setText("Cerrar");
-        Cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Cerrar.setName("Cerrar"); // NOI18N
         Cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -90,7 +90,7 @@ public class Con_cambio extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 970, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,6 +105,12 @@ public class Con_cambio extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel2.setText("<html>Cuando una ficha efectúa una captura tiene la posibilidad de cambiar su posición con otra ficha aliada. Posterior al cambio de posición se puede efectuar otro movimiento, si no efectua cambio de posición el juego contiúna con normalidad.<html>");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 670, 100));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/comoJugar1.2.png"))); // NOI18N
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/comoJugar2.2.png"))); // NOI18N
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 290, 280));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -181,6 +187,8 @@ public class Con_cambio extends javax.swing.JFrame {
     private javax.swing.JButton Cerrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
