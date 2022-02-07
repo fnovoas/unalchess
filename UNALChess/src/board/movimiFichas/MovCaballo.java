@@ -34,6 +34,7 @@ public class MovCaballo extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -107,6 +108,11 @@ public class MovCaballo extends javax.swing.JFrame {
         });
         bg.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(858, 505, 110, 30));
 
+        jLabel4.setBackground(new java.awt.Color(153, 255, 153));
+        jLabel4.setForeground(new java.awt.Color(51, 255, 51));
+        jLabel4.setText("Me gusta mi gato");
+        bg.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -172,6 +178,7 @@ public class MovCaballo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
