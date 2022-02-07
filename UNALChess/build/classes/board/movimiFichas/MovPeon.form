@@ -40,6 +40,9 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="bgAncestorAdded"/>
+      </Events>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
@@ -86,7 +89,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Movimiento del Caballo"/>
+                <Property name="text" type="java.lang.String" value="Movimiento del Pe&#xf3;n"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -133,7 +136,7 @@
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/movCaballo.png"/>
+                  <Image iconType="3" name="/imagenes/movPeon.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -145,12 +148,12 @@
               <Font name="Yu Gothic UI Light" size="20" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;El caballo es la pieza m&#xe1;s especial en el ajedrez, ya que tiene una flexibilidad que le hace una pieza poderosa. El caballo es la &#xfa;nica pieza del tablero que puede saltar sobre otras piezas. El caballo se mueve dos casillas en direcci&#xf3;n horizontal o vertical y despu&#xe9;s una casilla m&#xe1;s en &#xe1;ngulo recto. El movimiento del caballo tiene la forma de una &#x201c;L &#x201d;. El caballo siempre se cae sobre una casilla del color contrario a la de su casilla inicial. El caballo puede saltar sobre piezas de cualquier color mientras se mueve hasta su casilla de destino, pero no captura a ninguna de las piezas sobre las que salte.&lt;html&gt;&quot;" type="code"/>
+              <Connection code="&quot;&lt;html&gt;Normalmente, el pe&#xf3;n solo se mueve hacia delante, una casilla cada vez. Una excepci&#xf3;n es la primera vez que se mueve un pe&#xf3;n, que se puede mover dos casillas hacia delante. El pe&#xf3;n no puede saltar sobre otras piezas, cualquier pieza que est&#xe9; justo delante de un pe&#xf3;n bloquea su avance a esa casilla. El pe&#xf3;n es la &#xfa;nica pieza que no captura de la misma manera que se mueve, sino que lo hace en diagonal. No puede capturar movi&#xe9;ndose hacia delante.&lt;html&gt;&quot;" type="code"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="490" y="120" width="420" height="350"/>
+              <AbsoluteConstraints x="490" y="120" width="420" height="340"/>
             </Constraint>
           </Constraints>
         </Component>

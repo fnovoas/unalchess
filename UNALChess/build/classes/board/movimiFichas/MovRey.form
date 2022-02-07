@@ -86,7 +86,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Movimiento del Caballo"/>
+                <Property name="text" type="java.lang.String" value="Movimiento del Rey"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -133,7 +133,7 @@
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/movCaballo.png"/>
+                  <Image iconType="3" name="/imagenes/movRey.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -145,12 +145,12 @@
               <Font name="Yu Gothic UI Light" size="20" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;El caballo es la pieza m&#xe1;s especial en el ajedrez, ya que tiene una flexibilidad que le hace una pieza poderosa. El caballo es la &#xfa;nica pieza del tablero que puede saltar sobre otras piezas. El caballo se mueve dos casillas en direcci&#xf3;n horizontal o vertical y despu&#xe9;s una casilla m&#xe1;s en &#xe1;ngulo recto. El movimiento del caballo tiene la forma de una &#x201c;L &#x201d;. El caballo siempre se cae sobre una casilla del color contrario a la de su casilla inicial. El caballo puede saltar sobre piezas de cualquier color mientras se mueve hasta su casilla de destino, pero no captura a ninguna de las piezas sobre las que salte.&lt;html&gt;&quot;" type="code"/>
+              <Connection code="&quot;&lt;html&gt;El rey puede moverse a cualquier casilla adyacente, es decir, se puede mover una casilla en cualquier direcci&#xf3;n: horizontal, vertical o diagonal. No se puede mover a una casilla ocupada por otra pieza del mismo color. El rey captura de la misma manera en que se mueve, coloc&#xe1;ndose en la casilla de la pieza oponente. Hay otra limitaci&#xf3;n adicional al movimiento del rey: no puede moverse a ninguna casilla que le expusiera al ataque de una pieza oponente (lo que se llama &#x201c;jaque &#x201d;).&lt;html&gt;&quot;" type="code"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="490" y="120" width="420" height="350"/>
+              <AbsoluteConstraints x="490" y="120" width="420" height="340"/>
             </Constraint>
           </Constraints>
         </Component>
