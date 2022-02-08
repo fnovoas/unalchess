@@ -48,7 +48,7 @@ public class Wireframe extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(225, 255, 255));
         jButton2.setFont(new java.awt.Font("Georgia", 0, 20)); // NOI18N
-        jButton2.setText("Modo Random");
+        jButton2.setText("Modo Recompensa");
         jButton2.setMaximumSize(new java.awt.Dimension(150, 29));
         jButton2.setMinimumSize(new java.awt.Dimension(150, 29));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -100,11 +100,11 @@ public class Wireframe extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(103, Short.MAX_VALUE)
+                .addContainerGap(84, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
