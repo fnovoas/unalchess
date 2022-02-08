@@ -13,10 +13,13 @@ public class Tablero_1 extends javax.swing.JFrame {
     /**
      * Creates new form interfaz1
      */
+
     public Tablero_1() {
         initComponents();
-    }
+        this.setLocationRelativeTo(null);
+    }             
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -94,14 +97,12 @@ public class Tablero_1 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         JPanel_Turno = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        Tiempo_negras = new javax.swing.JLabel();
+        Tiempo_blancas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -517,20 +518,8 @@ public class Tablero_1 extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Georgia", 0, 26)); // NOI18N
         jLabel2.setText("Turno:");
 
-        jLabel3.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
-        jLabel3.setText("min:");
-
-        jLabel4.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
-        jLabel4.setText("seg:");
-
         jLabel5.setFont(new java.awt.Font("Georgia", 0, 26)); // NOI18N
         jLabel5.setText("Tiempo blancas:");
-
-        jLabel6.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
-        jLabel6.setText("min:");
-
-        jLabel7.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
-        jLabel7.setText("seg:");
 
         jButton1.setFont(new java.awt.Font("Georgia", 0, 22)); // NOI18N
         jButton1.setText("menú");
@@ -544,6 +533,12 @@ public class Tablero_1 extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Logo.png"))); // NOI18N
 
+        Tiempo_negras.setFont(new java.awt.Font("Georgia", 0, 26)); // NOI18N
+        Tiempo_negras.setText("00:00:00");
+
+        Tiempo_blancas.setFont(new java.awt.Font("Georgia", 0, 26)); // NOI18N
+        Tiempo_blancas.setText("00:00:00");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -554,6 +549,9 @@ public class Tablero_1 extends javax.swing.JFrame {
                     .addComponent(vistatablero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel9))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -561,18 +559,9 @@ public class Tablero_1 extends javax.swing.JFrame {
                             .addComponent(JPanel_Turno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel5)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel7)))
-                        .addContainerGap(50, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel9))))
+                            .addComponent(Tiempo_blancas)
+                            .addComponent(Tiempo_negras))
+                        .addContainerGap(50, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel8)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -581,7 +570,7 @@ public class Tablero_1 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel8)
-                .addGap(0, 6, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(vistatablero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -595,15 +584,11 @@ public class Tablero_1 extends javax.swing.JFrame {
                         .addGap(59, 59, 59)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(42, 42, 42)
+                        .addComponent(Tiempo_negras)
+                        .addGap(45, 45, 45)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))
+                        .addComponent(Tiempo_blancas)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel9)))
                 .addGap(0, 0, 0))
@@ -613,13 +598,14 @@ public class Tablero_1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    Wireframe w1=new Wireframe();
-    w1.setVisible(true);
-    this.setVisible(false);// TODO add your handling code here:
+        Wireframe w1=new Wireframe();
+        w1.setVisible(true);
+        this.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
     private void c01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c01ActionPerformed
-  
+        // TODO add your handling code here:
     }//GEN-LAST:event_c01ActionPerformed
 
     private void c06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c06ActionPerformed
@@ -740,6 +726,8 @@ public class Tablero_1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JPanel JPanel_Turno;
+    public static javax.swing.JLabel Tiempo_blancas;
+    public static javax.swing.JLabel Tiempo_negras;
     public static javax.swing.JButton c00;
     public static javax.swing.JButton c01;
     public static javax.swing.JButton c02;
@@ -807,11 +795,7 @@ public class Tablero_1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     public javax.swing.JPanel vistatablero;

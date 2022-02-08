@@ -4,11 +4,16 @@
  */
 package board;
 import static board.Tablero_1.JPanel_Turno;
+import static board.Tablero_1.Tiempo_negras;
+import static board.Tablero_1.Tiempo_blancas;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
 
 /**
  *
@@ -44,11 +49,11 @@ public class Controlador implements ActionListener {
       //*  turnos();
         añadirActionEvents();
         movimientos = new Movimientos();
-        
-        
+        tiempo_b = new Timer(1, acciones_b);
+        tiempo_n = new Timer(1, acciones_n);        
     }
      
-     public void iniciarTablero(){
+    public void iniciarTablero(){
         for (int i=0; i<8; i++){
             for (int j=0; j<8; j++){
                 tablero [i][j]="";
@@ -156,7 +161,6 @@ public class Controlador implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         if (turnoJugador.getTurnoJugador() == 'b') { //da el turno a las blancas
             posicionActual = GETbutonposicion(ae.getSource());
-
             if (comprobarSiLaFichaEsBlanca(posicionActual)) {
                 posicionAntigua = posicionActual;
             } else if (posicionAntigua != null) {
@@ -167,15 +171,16 @@ public class Controlador implements ActionListener {
                     posicionAntigua = null;
                     turnoJugador.setTurnoJugador('n');
                     JPanel_Turno.setBackground(Color.black);//cede el turno a las negras
+                    tiempo_b.stop();
+                    tiempo_n.start();
                     comprobarJaqueMateHaciaBlancas();
                     comprobarJaqueMateHaciaNegras();
-                   
+
                 }
             }
         }
         if (turnoJugador.getTurnoJugador() == 'n') { //da el turno a las negras
             posicionActual = GETbutonposicion(ae.getSource());
-
             if (comprobarSiLaFichaEsNegra(posicionActual)) {
                 posicionAntigua = posicionActual;
             } else if (posicionAntigua != null) {
@@ -186,6 +191,8 @@ public class Controlador implements ActionListener {
                     posicionAntigua = null;
                     turnoJugador.setTurnoJugador('b');
                     JPanel_Turno.setBackground(Color.white);//cede el turno a las blancas
+                    tiempo_n.stop();
+                    tiempo_b.start();
                     comprobarJaqueMateHaciaNegras();
                     comprobarJaqueMateHaciaBlancas();
                 }
@@ -561,6 +568,8 @@ public class Controlador implements ActionListener {
         }
         
         if(jaqueMate == true){
+            tiempo_b.stop();
+            tiempo_n.stop();
             JaqueMateBlancas ventana = new JaqueMateBlancas(null,true);
             ventana.setVisible(true);
         }
@@ -582,6 +591,8 @@ public class Controlador implements ActionListener {
         }
         
         if(jaqueMate == true){
+            tiempo_b.stop();
+            tiempo_n.stop();
             JaqueMateNegras ventana = new JaqueMateNegras(null,true);
             ventana.setVisible(true);
         }
@@ -634,6 +645,61 @@ public class Controlador implements ActionListener {
         }
     }
 
-   
-
+    //Temporizador de las piezas blancas
+    private Timer tiempo_b;   
+    private int centesimas_b = 0;
+    private int segundos_b = 0;
+    private int minutos_b = 0;
+    private ActionListener acciones_b = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            centesimas_b++;
+            if(centesimas_b > 99){
+                segundos_b++;
+                centesimas_b = 0;           
+            }
+            if(segundos_b > 59){
+                minutos_b++;
+                segundos_b = 0;
+            }
+            if(minutos_b > 59){
+                minutos_b = 0;
+            }
+            actualizarEtiquetaBlancas();
+        }
+    };
+    private void actualizarEtiquetaBlancas(){
+        String texto_b = (minutos_b<=9?"0":"")+minutos_b+":"+(segundos_b<=9?"0":"")+segundos_b+":"+(centesimas_b<=9?"0":"")+centesimas_b;
+        Tiempo_blancas.setText(texto_b);
+    }  
+    
+    //Temporizador de las piezas negras
+    private Timer tiempo_n;  
+    private int centesimas_n = 0;
+    private int segundos_n = 0;
+    private int minutos_n = 0;
+    private ActionListener acciones_n = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            centesimas_n++;
+            if(centesimas_n > 99){
+                segundos_n++;
+                centesimas_n = 0;           
+            }
+            if(segundos_n > 59){
+                minutos_n++;
+                segundos_n = 0;
+            }
+            if(minutos_n > 59){
+                minutos_n = 0;
+            }
+            actualizarEtiquetaNegras();
+        }
+    };
+    private void actualizarEtiquetaNegras(){
+        String texto_n = (minutos_n<=9?"0":"")+minutos_n+":"+(segundos_n<=9?"0":"")+segundos_n+":"+(centesimas_n<=9?"0":"")+centesimas_n;
+        Tiempo_negras.setText(texto_n);
+    } 
+            
+    
 }

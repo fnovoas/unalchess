@@ -17,6 +17,7 @@ public class Wireframe extends javax.swing.JFrame {
      */
     public Wireframe() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
