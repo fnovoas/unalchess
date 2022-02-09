@@ -192,6 +192,7 @@ public class ControladorR implements ActionListener {
                     posicionAntigua = null;
                     if(comioFicha()){
                       turnoJugador.setTurnoJugador('b');
+                    JPanel_Turno.setBackground(Color.white);//cede el turno a las negras                  
                       
                       peonNA=peonN;
                       caballoNA=caballoN;
@@ -201,8 +202,9 @@ public class ControladorR implements ActionListener {
                       
                   }else{
                       turnoJugador.setTurnoJugador('n');
+                      JPanel_Turno.setBackground(Color.black);//cede el turno a las negras
                   }
-                    JPanel_Turno.setBackground(Color.black);//cede el turno a las negras
+                  
                     tiempo_b.stop();
                     tiempo_n.start();
                     comprobarJaqueMateHaciaBlancas();
@@ -224,6 +226,7 @@ public class ControladorR implements ActionListener {
                     posicionAntigua = null;
                     if(modovariadoS()){
                       turnoJugador.setTurnoJugador('n');
+                      JPanel_Turno.setBackground(Color.black);//cede el turno a las negras                      
                       
                       peonBA=peonB;
                       caballoBA=caballoB;
@@ -233,8 +236,9 @@ public class ControladorR implements ActionListener {
                       
                   }else{
                       turnoJugador.setTurnoJugador('b');
+                      JPanel_Turno.setBackground(Color.white);//cede el turno a las blancas
                   }
-                    JPanel_Turno.setBackground(Color.white);//cede el turno a las blancas
+
                     tiempo_n.stop();
                     tiempo_b.start();
                     comprobarJaqueMateHaciaNegras();
