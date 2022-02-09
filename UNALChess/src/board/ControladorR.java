@@ -64,9 +64,12 @@ public class ControladorR implements ActionListener {
     
     public ControladorR(){
         iniciarTablero();
+
+        
         Tablero_1 vista= new Tablero_1(); 
         vista.setVisible(true);
       //*  turnos();
+        colorTablero();
         añadirActionEvents();
         movimientos = new Movimientos();
         tiempo_b = new Timer(1, acciones_b);
@@ -101,8 +104,56 @@ public class ControladorR implements ActionListener {
         tablero [7][6]="b_caballo";
         tablero [7][7]="b_torre";
         
-    } 
-//Se crea un array que hara de tablero y se incializan los String que actuaran como fichas   
+    }
+    
+    private void colorTablero() {  //cambiar color del fondo en este modo de juego
+        //pinta de verde todas las casillas negras
+         Color verde = new Color(125, 173, 126);
+         
+        /* for(int i = 0; i<77; i++){
+         vista*/
+         
+         Tablero_1.c01.setBackground(verde);
+         Tablero_1.c03.setBackground(verde);
+         Tablero_1.c05.setBackground(verde);
+         Tablero_1.c07.setBackground(verde);
+         
+         Tablero_1.c10.setBackground(verde);       
+         Tablero_1.c12.setBackground(verde);
+         Tablero_1.c14.setBackground(verde);
+         Tablero_1.c16.setBackground(verde);
+
+         Tablero_1.c21.setBackground(verde);
+         Tablero_1.c23.setBackground(verde);
+         Tablero_1.c25.setBackground(verde);
+         Tablero_1.c27.setBackground(verde);
+         
+         Tablero_1.c30.setBackground(verde);
+         Tablero_1.c32.setBackground(verde);
+         Tablero_1.c34.setBackground(verde);
+         Tablero_1.c36.setBackground(verde); 
+       
+         Tablero_1.c41.setBackground(verde); 
+         Tablero_1.c43.setBackground(verde);
+         Tablero_1.c45.setBackground(verde);
+         Tablero_1.c47.setBackground(verde);
+
+         Tablero_1.c50.setBackground(verde); 
+         Tablero_1.c52.setBackground(verde);
+         Tablero_1.c54.setBackground(verde);
+         Tablero_1.c56.setBackground(verde);
+         
+         Tablero_1.c61.setBackground(verde); 
+         Tablero_1.c63.setBackground(verde);
+         Tablero_1.c65.setBackground(verde);
+         Tablero_1.c67.setBackground(verde);
+         
+         Tablero_1.c70.setBackground(verde); 
+         Tablero_1.c72.setBackground(verde);
+         Tablero_1.c74.setBackground(verde);
+         Tablero_1.c76.setBackground(verde);            
+    }
+//Se crea un array que hara de tablero y se incializan los String que actuarán como fichas   
     private void añadirActionEvents() {
         Tablero_1.c00.addActionListener(this);
         Tablero_1.c01.addActionListener(this);
