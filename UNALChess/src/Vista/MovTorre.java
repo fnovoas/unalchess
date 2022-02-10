@@ -2,18 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package board.movimiFichas;
+package Vista;
+
+import Vista.MovReina;
 
 /**
  *
  * @author ñ
  */
-public class MovAlfil extends javax.swing.JFrame {
+public class MovTorre extends javax.swing.JFrame {
 
     /**
      * Creates new form comoJugar
      */
-    public MovAlfil() {
+    public MovTorre() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -50,12 +52,12 @@ public class MovAlfil extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Movimiento del Alfil");
+        jLabel1.setText("Movimiento de la Torre");
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("X");
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
@@ -67,19 +69,19 @@ public class MovAlfil extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 918, Short.MAX_VALUE))
+                .addGap(14, 14, 14)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 940, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(16, 16, 16)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 70));
@@ -88,7 +90,7 @@ public class MovAlfil extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(51, 51, 255));
         jLabel2.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/movAlfil.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/movTorre.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -110,7 +112,7 @@ public class MovAlfil extends javax.swing.JFrame {
         bg.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 320, 330));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 20)); // NOI18N
-        jLabel3.setText("<html>El alfil se mueve sobre el tablero en una línea recta diagonal. Se puede mover tantas casillas como se quiera, hasta que se encuentre con el final del tablero o con otra pieza. El alfil no puede saltar sobre otras piezas. Captura del mismo modo que se desplaza, colocándose en la casilla de la pieza oponente. Debido a la manera en la que se mueve el alfil, la pieza siempre permanece en las casillas del mismo color que su casilla original.<html>");
+        jLabel3.setText("<html>La torre se mueve en una línea recta horizontal o vertical a lo largo de cualquier número de casillas desocupadas, hasta que alcanza el final del tablero o es bloqueado por otra pieza. No puede saltar sobre otras piezas. La torre captura de la misma manera en la que se mueve, ocupando la casilla en la que está la pieza oponente. La torre puede colocarse en cualquier casilla del tablero, por tanto es una de las piezas más poderosas.<html>");
         bg.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 420, 340));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 204));
@@ -118,20 +120,20 @@ public class MovAlfil extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SIGUIENTE");
         jButton1.setBorder(null);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        bg.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 510, 110, 30));
+        bg.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 500, 110, 30));
 
         anterior.setBackground(new java.awt.Color(0, 102, 204));
         anterior.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         anterior.setForeground(new java.awt.Color(255, 255, 255));
         anterior.setText("ANTERIOR");
         anterior.setBorder(null);
-        anterior.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        anterior.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         anterior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 anteriorActionPerformed(evt);
@@ -154,16 +156,15 @@ public class MovAlfil extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MovCaballo caballo= new MovCaballo();
-        caballo.setVisible(true);
+        MovReina reina= new MovReina();
+        reina.setVisible(true);
         
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorActionPerformed
-        MovPeon peon= new MovPeon();
-        peon.setVisible(true);
-        
+        MovCaballo caballo=new MovCaballo();
+        caballo.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_anteriorActionPerformed
 
@@ -188,13 +189,13 @@ public class MovAlfil extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MovAlfil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovTorre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MovAlfil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovTorre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MovAlfil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovTorre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MovAlfil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovTorre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -204,7 +205,7 @@ public class MovAlfil extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MovAlfil().setVisible(true);
+                new MovTorre().setVisible(true);
             }
         });
     }

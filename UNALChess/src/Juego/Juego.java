@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package board;
+package Juego;
+
+import Vista.Menu;
 
 /**
  *
@@ -15,7 +17,7 @@ public class Juego {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Wireframe menu=new Wireframe();
+        Menu menu=new Menu();
         menu.setVisible(true);
         
     }

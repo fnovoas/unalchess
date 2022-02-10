@@ -2,10 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package board;
-import static board.Tablero_1.JPanel_Turno;
-import static board.Tablero_1.Tiempo_negras;
-import static board.Tablero_1.Tiempo_blancas;
+package Controlador;
+import Vista.JaqueMateBlancas;
+import Vista.JaqueMateNegras;
+import Modelo.Movimientos;
+import Vista.Tablero_1;
+import Modelo.Turno;
+import Vista.VentanaEleccionFicha;
+import Vista.VentanaEleccionFichaN;
+import static Vista.Tablero_1.JPanel_Turno;
+import static Vista.Tablero_1.Tiempo_negras;
+import static Vista.Tablero_1.Tiempo_blancas;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,7 +26,7 @@ import javax.swing.Timer;
  *
  * @author Lenovo
  */
-public class Controlador implements ActionListener {
+public class ControladorR implements ActionListener {
 
     
     public static boolean enrroqueReyA = true;
@@ -32,7 +39,27 @@ public class Controlador implements ActionListener {
     public static String[][] tablero = new String[8][8];
     /*public char turnoJugador = 'b'; */ 
     Turno turnoJugador = new Turno(); //determina el turno
-
+    
+    int peonN=0;
+    int caballoN=0;
+    int torreN=0;
+    int alfilN=0;
+    int reinaN=0;
+    int peonB=0;
+    int caballoB=0;
+    int torreB=0;
+    int alfilB=0;
+    int reinaB=0;
+    int peonNA=0;
+    int caballoNA=0;
+    int torreNA=0;
+    int alfilNA=0;
+    int reinaNA=0;
+    int peonBA=0;
+    int caballoBA=0;
+    int torreBA=0;
+    int alfilBA=0;
+    int reinaBA=0;
     
     private String posicionAntigua = null;
     private String posicionNueva = null;
@@ -42,11 +69,14 @@ public class Controlador implements ActionListener {
     Movimientos movimientos;
     public boolean jaqueMate=false;
     
-    public Controlador(){
+    public ControladorR(){
         iniciarTablero();
+
+        
         Tablero_1 vista= new Tablero_1(); 
         vista.setVisible(true);
       //*  turnos();
+        colorTablero();
         añadirActionEvents();
         movimientos = new Movimientos();
         tiempo_b = new Timer(1, acciones_b);
@@ -81,8 +111,56 @@ public class Controlador implements ActionListener {
         tablero [7][6]="b_caballo";
         tablero [7][7]="b_torre";
         
-    } 
-//Se crea un array que hara de tablero y se incializan los String que actuaran como fichas   
+    }
+    
+    private void colorTablero() {  //cambiar color del fondo en este modo de juego
+        //pinta de verde todas las casillas negras
+         Color verde = new Color(125, 173, 126);
+         
+        /* for(int i = 0; i<77; i++){
+         vista*/
+         
+         Tablero_1.c01.setBackground(verde);
+         Tablero_1.c03.setBackground(verde);
+         Tablero_1.c05.setBackground(verde);
+         Tablero_1.c07.setBackground(verde);
+         
+         Tablero_1.c10.setBackground(verde);       
+         Tablero_1.c12.setBackground(verde);
+         Tablero_1.c14.setBackground(verde);
+         Tablero_1.c16.setBackground(verde);
+
+         Tablero_1.c21.setBackground(verde);
+         Tablero_1.c23.setBackground(verde);
+         Tablero_1.c25.setBackground(verde);
+         Tablero_1.c27.setBackground(verde);
+         
+         Tablero_1.c30.setBackground(verde);
+         Tablero_1.c32.setBackground(verde);
+         Tablero_1.c34.setBackground(verde);
+         Tablero_1.c36.setBackground(verde); 
+       
+         Tablero_1.c41.setBackground(verde); 
+         Tablero_1.c43.setBackground(verde);
+         Tablero_1.c45.setBackground(verde);
+         Tablero_1.c47.setBackground(verde);
+
+         Tablero_1.c50.setBackground(verde); 
+         Tablero_1.c52.setBackground(verde);
+         Tablero_1.c54.setBackground(verde);
+         Tablero_1.c56.setBackground(verde);
+         
+         Tablero_1.c61.setBackground(verde); 
+         Tablero_1.c63.setBackground(verde);
+         Tablero_1.c65.setBackground(verde);
+         Tablero_1.c67.setBackground(verde);
+         
+         Tablero_1.c70.setBackground(verde); 
+         Tablero_1.c72.setBackground(verde);
+         Tablero_1.c74.setBackground(verde);
+         Tablero_1.c76.setBackground(verde);            
+    }
+//Se crea un array que hara de tablero y se incializan los String que actuarán como fichas   
     private void añadirActionEvents() {
         Tablero_1.c00.addActionListener(this);
         Tablero_1.c01.addActionListener(this);
@@ -166,11 +244,25 @@ public class Controlador implements ActionListener {
             } else if (posicionAntigua != null) {
                 posicionNueva = posicionActual;
                 if (movimientos.esPosibleEsteMovimientoA(tablero, posicionAntigua, posicionNueva)){
+                    lecturaT();
                     cambiarfichas(posicionAntigua, posicionNueva);
                     posicionNueva = null;
                     posicionAntigua = null;
-                    turnoJugador.setTurnoJugador('n');
-                    JPanel_Turno.setBackground(Color.black);//cede el turno a las negras
+                    if(comioFicha()){
+                      turnoJugador.setTurnoJugador('b');
+                    JPanel_Turno.setBackground(Color.white);//cede el turno a las negras                  
+                      
+                      peonNA=peonN;
+                      caballoNA=caballoN;
+                      torreNA=torreN;
+                      alfilNA=alfilN;
+                      reinaNA=reinaN;
+                      
+                  }else{
+                      turnoJugador.setTurnoJugador('n');
+                      JPanel_Turno.setBackground(Color.black);//cede el turno a las negras
+                  }
+                  
                     tiempo_b.stop();
                     tiempo_n.start();
                     comprobarJaqueMateHaciaBlancas();
@@ -186,11 +278,25 @@ public class Controlador implements ActionListener {
             } else if (posicionAntigua != null) {
                 posicionNueva = posicionActual;
                 if (movimientos.esPosibleEsteMovimientoB(tablero, posicionAntigua, posicionNueva)){
+                    lecturaTT();
                     cambiarfichas(posicionAntigua, posicionNueva);
                     posicionNueva = null;
                     posicionAntigua = null;
-                    turnoJugador.setTurnoJugador('b');
-                    JPanel_Turno.setBackground(Color.white);//cede el turno a las blancas
+                    if(modovariadoS()){
+                      turnoJugador.setTurnoJugador('n');
+                      JPanel_Turno.setBackground(Color.black);//cede el turno a las negras                      
+                      
+                      peonBA=peonB;
+                      caballoBA=caballoB;
+                      torreBA=torreB;
+                      alfilBA=alfilB;
+                      reinaBA=reinaB;
+                      
+                  }else{
+                      turnoJugador.setTurnoJugador('b');
+                      JPanel_Turno.setBackground(Color.white);//cede el turno a las blancas
+                  }
+
                     tiempo_n.stop();
                     tiempo_b.start();
                     comprobarJaqueMateHaciaNegras();
@@ -532,7 +638,89 @@ public class Controlador implements ActionListener {
         
         }*/
         
+    private void lecturaT(){
+        // se lee el arreglo y se cuentan las fichas
+            
+             for (int i=0; i<8; i++){
+             for (int j=0; j<8; j++){
+                 if(tablero[i][j].equals("n_peon")){
+                     peonN+=1;
+                 }
+                 if(tablero[i][j].equals("n_caballo")){
+                     caballoN+=1;
+                 }
+                 if(tablero[i][j].equals("n_torre")){
+                     torreN+=1;
+                 }
+                 if(tablero[i][j].equals("n_alfil")){
+                     alfilN+=1;
+                 }
+                 if(tablero[i][j].equals("n_reina")){
+                     reinaN+=1;
+                 }
+            }
+        }
+             
+        
+    }
     
+    private void lecturaTT(){
+            // se lee el arreglo y se cuentan las fichas blancas
+            
+             for (int i=0; i<8; i++){
+             for (int j=0; j<8; j++){
+                 if(tablero[i][j].equals("b_peon")){
+                     peonB+=1;
+                 }
+                 if(tablero[i][j].equals("b_caballo")){
+                     caballoB+=1;
+                 }
+                 if(tablero[i][j].equals("b_torre")){
+                     torreB+=1;
+                 }
+                 if(tablero[i][j].equals("b_alfil")){
+                     alfilB+=1;
+                 }
+                 if(tablero[i][j].equals("b_reina")){
+                     reinaB+=1;
+                 }
+            }
+        }
+             
+        
+    }
+    private boolean comioFicha(){
+        // vuelve a leer el tablero despues de mover una ficha, para ver si se han comido
+        //una ficha, si ese es el caso retorna true, sino false
+            
+            
+             for (int i=0; i<8; i++){
+             for (int j=0; j<8; j++){
+                 if(tablero[i][j].equals("n_peon")){
+                     peonNA+=1;
+                 }
+                 if(tablero[i][j].equals("n_caballo")){
+                     caballoNA+=1;
+                 }
+                 if(tablero[i][j].equals("n_torre")){
+                     torreNA+=1;
+                 }
+                 if(tablero[i][j].equals("n_alfil")){
+                     alfilNA+=1;
+                 }
+                 if(tablero[i][j].equals("n_reina")){
+                     reinaNA+=1;
+                 }
+            }
+        }
+            
+          if(peonNA!=peonN || caballoNA!=caballoN || alfilNA!=alfilN || reinaNA!=reinaN|| torreNA!=torreN ){
+              return true;
+          } else {
+              return false;
+          }  
+         
+    }
     
     private void comprobarPeonEnUltimaFila(){
         for (int i = 0; i < 8; i++) {
@@ -574,6 +762,38 @@ public class Controlador implements ActionListener {
             ventana.setVisible(true);
         }
         
+    }
+    
+    private boolean modovariadoS(){
+        
+            //es igual
+            
+             for (int i=0; i<8; i++){
+             for (int j=0; j<8; j++){
+                 if(tablero[i][j].equals("b_peon")){
+                     peonBA+=1;
+                 }
+                 if(tablero[i][j].equals("b_caballo")){
+                     caballoBA+=1;
+                 }
+                 if(tablero[i][j].equals("b_torre")){
+                     torreBA+=1;
+                 }
+                 if(tablero[i][j].equals("b_alfil")){
+                     alfilBA+=1;
+                 }
+                 if(tablero[i][j].equals("b_reina")){
+                     reinaBA+=1;
+                 }
+            }
+        }
+             
+          if(peonBA!=peonB || caballoBA!=caballoB || alfilBA!=alfilB || reinaBA!=reinaB|| torreBA!=torreB ){
+              return true;
+          } else {
+              return false;
+          }  
+         
     }
     private void comprobarJaqueMateHaciaNegras(){
         boolean jaqueMate = true;

@@ -63,21 +63,21 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel1" pref="940" max="32767" attributes="0"/>
+                      <Component id="jLabel1" pref="958" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                      <EmptySpace pref="11" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -95,7 +95,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Movimiento de la Torre"/>
+                <Property name="text" type="java.lang.String" value="Movimiento del Rey"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
@@ -108,7 +108,7 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="X"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Cursor de Mano"/>
+                  <Color id="Default Cursor"/>
                 </Property>
               </Properties>
               <Events>
@@ -159,7 +159,7 @@
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/movTorre.png"/>
+                  <Image iconType="3" name="/imagenes/movRey.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -171,7 +171,7 @@
               <Font name="Yu Gothic UI Light" size="20" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;La torre se mueve en una l&#xed;nea recta horizontal o vertical a lo largo de cualquier n&#xfa;mero de casillas desocupadas, hasta que alcanza el final del tablero o es bloqueado por otra pieza. No puede saltar sobre otras piezas. La torre captura de la misma manera en la que se mueve, ocupando la casilla en la que est&#xe1; la pieza oponente. La torre puede colocarse en cualquier casilla del tablero, por tanto es una de las piezas m&#xe1;s poderosas.&lt;html&gt;&quot;" type="code"/>
+              <Connection code="&quot;&lt;html&gt;El rey puede moverse a cualquier casilla adyacente, es decir, se puede mover una casilla en cualquier direcci&#xf3;n: horizontal, vertical o diagonal. No se puede mover a una casilla ocupada por otra pieza del mismo color. El rey captura de la misma manera en que se mueve, coloc&#xe1;ndose en la casilla de la pieza oponente. Hay otra limitaci&#xf3;n adicional al movimiento del rey: no puede moverse a ninguna casilla que le expusiera al ataque de una pieza oponente (lo que se llama &#x201c;jaque &#x201d;).&lt;html&gt;&quot;" type="code"/>
             </Property>
           </Properties>
           <Constraints>
@@ -196,7 +196,7 @@
               <Border info="null"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor de Mano"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
           <Events>
@@ -204,11 +204,11 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="860" y="500" width="110" height="30"/>
+              <AbsoluteConstraints x="860" y="510" width="110" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="anterior">
+        <Component class="javax.swing.JButton" name="cerrar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="66" red="0" type="rgb"/>
@@ -224,11 +224,11 @@
               <Border info="null"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor de Mano"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="anteriorActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cerrarActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

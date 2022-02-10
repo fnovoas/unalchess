@@ -2,18 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package board;
+package Vista;
+
+import Controlador.Controlador;
 import javax.swing.ImageIcon;
+
 /**
  *
  * @author Lenovo
  */
-public class VentanaEleccionFicha extends javax.swing.JDialog {
+public class VentanaEleccionFichaN extends javax.swing.JDialog {
 
     /**
-     * Creates new form VentanaEleccionFicha
+     * Creates new form VentanaEleccionFichaN
      */
-    public VentanaEleccionFicha(java.awt.Frame parent, boolean modal) {
+    public VentanaEleccionFichaN(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         this.setLocationRelativeTo(null);
@@ -29,40 +32,17 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setBackground(new java.awt.Color(250, 250, 250));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(144, 144));
         jPanel1.setLayout(new java.awt.GridLayout(2, 2));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Reina_Blanco.png"))); // NOI18N
-        jButton3.setAlignmentX(0.8F);
-        jButton3.setAlignmentY(0.8F);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton3);
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Torre_Blanco.png"))); // NOI18N
-        jButton4.setAlignmentX(0.8F);
-        jButton4.setAlignmentY(0.8F);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton4);
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Caballo_Blanco.png"))); // NOI18N
-        jButton2.setAlignmentX(0.8F);
-        jButton2.setAlignmentY(0.8F);
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Reina_Negro.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -70,9 +50,23 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
         });
         jPanel1.add(jButton2);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Alfil_Blanco.png"))); // NOI18N
-        jButton1.setAlignmentX(0.8F);
-        jButton1.setAlignmentY(0.8F);
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Torre_Negro.png"))); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4);
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Caballo_Negro.png"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Alfil_Negro.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -100,29 +94,29 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Controlador.fichaElegida = "b_caballo";
-        Controlador.imagenElegida = (ImageIcon) jButton2.getIcon();
-        dispose();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Controlador.fichaElegida = "b_alfil";
+        Controlador.fichaElegida = "n_alfil";
         Controlador.imagenElegida = (ImageIcon) jButton1.getIcon();
         dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Controlador.fichaElegida = "b_torre";
-        Controlador.imagenElegida = (ImageIcon) jButton4.getIcon();
-        dispose();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Controlador.fichaElegida = "b_reina";
+        Controlador.fichaElegida = "n_caballo";
         Controlador.imagenElegida = (ImageIcon) jButton3.getIcon();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Controlador.fichaElegida = "n_reina";
+        Controlador.imagenElegida = (ImageIcon) jButton2.getIcon();
+        dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Controlador.fichaElegida = "n_torre";
+        Controlador.imagenElegida = (ImageIcon) jButton4.getIcon();
+        dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,13 +135,13 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaEleccionFicha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaEleccionFichaN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaEleccionFicha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaEleccionFichaN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaEleccionFicha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaEleccionFichaN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaEleccionFicha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaEleccionFichaN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -155,7 +149,7 @@ public class VentanaEleccionFicha extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                VentanaEleccionFicha dialog = new VentanaEleccionFicha(new javax.swing.JFrame(), true);
+                VentanaEleccionFichaN dialog = new VentanaEleccionFichaN(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package board.movimiFichas;
+package Vista;
 
 /**
  *
  * @author ñ
  */
-public class MovCaballo extends javax.swing.JFrame {
+public class MovRey extends javax.swing.JFrame {
 
     /**
      * Creates new form comoJugar
      */
-    public MovCaballo() {
+    public MovRey() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -30,13 +30,12 @@ public class MovCaballo extends javax.swing.JFrame {
         bg = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        anterior = new javax.swing.JButton();
+        cerrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -51,15 +50,15 @@ public class MovCaballo extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Movimiento del Caballo");
+        jLabel1.setText("Movimiento del Rey");
 
-        jLabel5.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("X");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel4.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("X");
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
+                jLabel4MouseClicked(evt);
             }
         });
 
@@ -68,10 +67,10 @@ public class MovCaballo extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 941, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 958, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,7 +78,7 @@ public class MovCaballo extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel4))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -89,14 +88,14 @@ public class MovCaballo extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(51, 51, 255));
         jLabel2.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/movCaballo.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/movRey.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -111,15 +110,15 @@ public class MovCaballo extends javax.swing.JFrame {
         bg.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 320, 330));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 20)); // NOI18N
-        jLabel3.setText("<html>El caballo es la pieza más especial en el ajedrez, ya que tiene una flexibilidad que le hace una pieza poderosa. El caballo es la única pieza del tablero que puede saltar sobre otras piezas. El caballo se mueve dos casillas en dirección horizontal o vertical y después una casilla más en ángulo recto. El movimiento del caballo tiene la forma de una “L ”. El caballo siempre se cae sobre una casilla del color contrario a la de su casilla inicial. El caballo puede saltar sobre piezas de cualquier color mientras se mueve hasta su casilla de destino, pero no captura a ninguna de las piezas sobre las que salte.<html>");
-        bg.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 420, 350));
+        jLabel3.setText("<html>El rey puede moverse a cualquier casilla adyacente, es decir, se puede mover una casilla en cualquier dirección: horizontal, vertical o diagonal. No se puede mover a una casilla ocupada por otra pieza del mismo color. El rey captura de la misma manera en que se mueve, colocándose en la casilla de la pieza oponente. Hay otra limitación adicional al movimiento del rey: no puede moverse a ninguna casilla que le expusiera al ataque de una pieza oponente (lo que se llama “jaque ”).<html>");
+        bg.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 420, 340));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 204));
         jButton1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SIGUIENTE");
         jButton1.setBorder(null);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -127,22 +126,18 @@ public class MovCaballo extends javax.swing.JFrame {
         });
         bg.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 510, 110, 30));
 
-        jLabel4.setBackground(new java.awt.Color(153, 255, 153));
-        jLabel4.setForeground(new java.awt.Color(51, 255, 51));
-        bg.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, -1, -1));
-
-        anterior.setBackground(new java.awt.Color(0, 102, 204));
-        anterior.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        anterior.setForeground(new java.awt.Color(255, 255, 255));
-        anterior.setText("ANTERIOR");
-        anterior.setBorder(null);
-        anterior.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        anterior.addActionListener(new java.awt.event.ActionListener() {
+        cerrar.setBackground(new java.awt.Color(0, 102, 204));
+        cerrar.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        cerrar.setForeground(new java.awt.Color(255, 255, 255));
+        cerrar.setText("ANTERIOR");
+        cerrar.setBorder(null);
+        cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        cerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                anteriorActionPerformed(evt);
+                cerrarActionPerformed(evt);
             }
         });
-        bg.add(anterior, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 110, 30));
+        bg.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 500, 110, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -159,21 +154,22 @@ public class MovCaballo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MovTorre torre= new MovTorre();
-        torre.setVisible(true);
+        Con_cambio cambio= new Con_cambio();
+        cambio.setVisible(true);
         
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorActionPerformed
-        MovAlfil alfil= new MovAlfil();
-        alfil.setVisible(true);
+    private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
+        MovReina reina= new MovReina();
+        reina.setVisible(true);
+        
         this.dispose();
-    }//GEN-LAST:event_anteriorActionPerformed
+    }//GEN-LAST:event_cerrarActionPerformed
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         this.dispose();
-    }//GEN-LAST:event_jLabel5MouseClicked
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -192,13 +188,13 @@ public class MovCaballo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MovCaballo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovRey.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MovCaballo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovRey.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MovCaballo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovRey.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MovCaballo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovRey.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -208,20 +204,19 @@ public class MovCaballo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MovCaballo().setVisible(true);
+                new MovRey().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton anterior;
     private javax.swing.JPanel bg;
+    private javax.swing.JButton cerrar;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

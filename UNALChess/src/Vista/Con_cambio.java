@@ -1,5 +1,5 @@
 
-package board.movimiFichas;
+package Vista;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -63,7 +63,7 @@ public class Con_cambio extends javax.swing.JFrame {
         Cerrar.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         Cerrar.setForeground(new java.awt.Color(255, 255, 255));
         Cerrar.setText("CERRAR");
-        Cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Cerrar.setName("Cerrar"); // NOI18N
         Cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -121,7 +121,7 @@ public class Con_cambio extends javax.swing.JFrame {
         anterior.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         anterior.setForeground(new java.awt.Color(255, 255, 255));
         anterior.setText("ANTERIOR");
-        anterior.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        anterior.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         anterior.setName("Cerrar"); // NOI18N
         anterior.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
