@@ -3,12 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ASUS/Documents/unalchess/UNALChess/src/board/Wireframe.java</file>
-            <file>file:/C:/Users/ASUS/Documents/unalchess/UNALChess/src/board/Movimientos.java</file>
-            <file>file:/C:/Users/ASUS/Documents/unalchess/UNALChess/src/board/ControladorR.java</file>
-            <file>file:/C:/Users/ASUS/Documents/unalchess/UNALChess/src/board/Tablero_1.java</file>
-            <file>file:/C:/Users/ASUS/Documents/unalchess/UNALChess/src/board/Controlador.java</file>
-            <file>file:/C:/Users/ASUS/Documents/unalchess/UNALChess/src/board/Juego.java</file>
+            <file>file:/C:/Users/ñ/Documents/GitHub/unalchess/UNALChess/src/board/movimiFichas/Con_cambio.java</file>
+            <file>file:/C:/Users/ñ/Documents/GitHub/unalchess/UNALChess/src/board/movimiFichas/MovTorre.java</file>
+            <file>file:/C:/Users/ñ/Documents/GitHub/unalchess/UNALChess/src/board/movimiFichas/MovAlfil.java</file>
+            <file>file:/C:/Users/ñ/Documents/GitHub/unalchess/UNALChess/src/board/movimiFichas/MovRey.java</file>
+            <file>file:/C:/Users/ñ/Documents/GitHub/unalchess/UNALChess/src/board/movimiFichas/MovPeon.java</file>
+            <file>file:/C:/Users/ñ/Documents/GitHub/unalchess/UNALChess/src/board/Wireframe.java</file>
+            <file>file:/C:/Users/ñ/Documents/GitHub/unalchess/UNALChess/src/board/movimiFichas/MovCaballo.java</file>
+            <file>file:/C:/Users/ñ/Documents/GitHub/unalchess/UNALChess/src/board/movimiFichas/MovReina.java</file>
         </group>
     </open-files>
 </project-private>

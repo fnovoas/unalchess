@@ -40,10 +40,12 @@ public class Con_cambio extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        anterior = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setLocationByPlatform(true);
+        setUndecorated(true);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -58,12 +60,15 @@ public class Con_cambio extends javax.swing.JFrame {
         jPanel3.add(l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 410, 50, 30));
 
         Cerrar.setBackground(new java.awt.Color(0, 102, 255));
-        Cerrar.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        Cerrar.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         Cerrar.setForeground(new java.awt.Color(255, 255, 255));
-        Cerrar.setText("Cerrar");
-        Cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cerrar.setText("CERRAR");
+        Cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cerrar.setName("Cerrar"); // NOI18N
         Cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CerrarMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 CerrarMousePressed(evt);
             }
@@ -73,7 +78,7 @@ public class Con_cambio extends javax.swing.JFrame {
                 CerrarActionPerformed(evt);
             }
         });
-        jPanel3.add(Cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 470, -1, -1));
+        jPanel3.add(Cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 480, 110, 30));
 
         jPanel2.setBackground(new java.awt.Color(255, 0, 0));
 
@@ -81,7 +86,7 @@ public class Con_cambio extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Juego modo Random (con Cambio)");
+        jLabel1.setText("Juego modo Recompensa");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -103,14 +108,35 @@ public class Con_cambio extends javax.swing.JFrame {
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 50));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        jLabel2.setText("<html>Cuando una ficha efectúa una captura tiene la posibilidad de cambiar su posición con otra ficha aliada. Posterior al cambio de posición se puede efectuar otro movimiento, si no efectua cambio de posición el juego contiúna con normalidad.<html>");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 670, 100));
+        jLabel2.setText("<html>En dado caso que un jugador coma una ficha, este tendrá un turno extra.<html>");
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, 590, 100));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/comoJugar1.2.png"))); // NOI18N
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/comoJugar1.3.png"))); // NOI18N
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/comoJugar2.2.png"))); // NOI18N
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 290, 280));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/comoJugar2.3.png"))); // NOI18N
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 60, 330, 300));
+
+        anterior.setBackground(new java.awt.Color(0, 102, 255));
+        anterior.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        anterior.setForeground(new java.awt.Color(255, 255, 255));
+        anterior.setText("ANTERIOR");
+        anterior.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        anterior.setName("Cerrar"); // NOI18N
+        anterior.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                anteriorMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                anteriorMousePressed(evt);
+            }
+        });
+        anterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anteriorActionPerformed(evt);
+            }
+        });
+        jPanel3.add(anterior, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 480, 140, 30));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -144,6 +170,26 @@ public class Con_cambio extends javax.swing.JFrame {
     private void CerrarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarMousePressed
         dispose();
     }//GEN-LAST:event_CerrarMousePressed
+
+    private void anteriorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_anteriorMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_anteriorMousePressed
+
+    private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorActionPerformed
+        MovRey rey= new MovRey();
+        rey.setVisible(true);
+        
+        this.dispose();
+        
+    }//GEN-LAST:event_anteriorActionPerformed
+
+    private void CerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CerrarMouseClicked
+
+    private void anteriorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_anteriorMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_anteriorMouseClicked
 
     /**
      * @param args the command line arguments
@@ -185,6 +231,7 @@ public class Con_cambio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cerrar;
+    private javax.swing.JButton anterior;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
