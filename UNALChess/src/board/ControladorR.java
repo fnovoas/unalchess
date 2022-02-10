@@ -707,7 +707,7 @@ public class ControladorR implements ActionListener {
             }
         }
             
-          if(peonNA!=peonN || caballoNA!=caballoN || alfilNA!=alfilN || reinaNA!=reinaN ){
+          if(peonNA!=peonN || caballoNA!=caballoN || alfilNA!=alfilN || reinaNA!=reinaN|| torreNA!=torreN ){
               return true;
           } else {
               return false;
@@ -781,7 +781,7 @@ public class ControladorR implements ActionListener {
             }
         }
              
-          if(peonBA!=peonB || caballoBA!=caballoB || alfilBA!=alfilB || reinaBA!=reinaB ){
+          if(peonBA!=peonB || caballoBA!=caballoB || alfilBA!=alfilB || reinaBA!=reinaB|| torreBA!=torreB ){
               return true;
           } else {
               return false;
